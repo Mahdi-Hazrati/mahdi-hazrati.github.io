@@ -1,8 +1,9 @@
+import "reset-default-style"
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">initial react app - Mahdi Hazrati</div>
+    <div className="app">initial react app - Mahdi Hazrati</div>
   )
 }
 
