@@ -1,10 +1,13 @@
 import "reset-default-style"
 import './App.scss';
-import {EmojiEmotions} from "@mui/icons-material"
+import Introduction from "../Introduction/Introduction";
+
 
 function App() {
   return (
-    <div className="app">Hello Mahdi <EmojiEmotions/></div>
+    <div className="app">
+      <Introduction />
+    </div>
   )
 }
 
