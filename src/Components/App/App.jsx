@@ -1,9 +1,10 @@
 import "reset-default-style"
 import './App.scss';
+import {EmojiEmotions} from "@mui/icons-material"
 
 function App() {
   return (
-    <div className="app">initial react app - Mahdi Hazrati</div>
+    <div className="app">Hello Mahdi <EmojiEmotions/></div>
   )
 }
 
