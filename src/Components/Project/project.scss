@@ -1,0 +1,47 @@
+.project{
+    border: 1px solid crimson;
+    width: 300px;
+    height: 40vh;
+    margin: 20px 10px;
+    border-radius: 10px 10px 0px 0px;
+    background-position: center;
+    overflow: hidden;
+    background-color: transparent;
+    .tab{
+        display: flex;
+        height: 20px;
+        padding: 5px;
+        align-items: center;
+        justify-content: flex-start;
+        position: sticky;
+        z-index: 2;
+        background-color: rgba(220, 20, 60, 1);
+        :nth-child(1){
+            background-color: green;
+        }
+        :nth-child(2){
+            background-color: gold;
+        }
+        :nth-child(3){
+            background-color: crimson;
+        }
+        .circle{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 4px;
+            background-color: rgb(255, 255, 255);
+        }
+    }
+    a {
+        overflow: hidden;
+        .thumbnails{
+            width: 100%;
+            transition: all 10s ease;
+        }
+    }
+    &:hover .thumbnails{
+        transform: translateY(-100%);
+    }
+
+}
