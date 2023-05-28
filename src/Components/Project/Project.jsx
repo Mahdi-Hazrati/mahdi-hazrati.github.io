@@ -1,6 +1,6 @@
 import "./project.scss"
-import projectImage from "../../Assets/images/screencapture.png"
-const Project = ()=>{
+
+const Project = ({thumbnails, link})=>{
     return(
         <div className="project">
             <div className="tab">
@@ -8,8 +8,8 @@ const Project = ()=>{
                 <div className="circle"></div>
                 <div className="circle"></div>
             </div>
-            <a href="https://mahdi-hazrati.github.io/" target="_blank" rel="noreferrer">
-                <img src={projectImage} alt="project-thumbnail" className="thumbnails"/>
+            <a href={link} target="_blank" rel="noreferrer">
+                <img src={thumbnails} alt="project-thumbnail" className="thumbnails"/>
             </a>
         </div>
     )

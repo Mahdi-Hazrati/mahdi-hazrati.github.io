@@ -1,4 +1,6 @@
 import Project from "../Project/Project"
+import { projectList } from "../../Global/ProjectsList"
+
 import "./projects.scss"
 
 const Projects = ()=>{
@@ -13,11 +15,10 @@ const Projects = ()=>{
                 </p>
             </div>
             <div className="list">
-                <Project />
-                <Project />
-                <Project />
-                <Project />
-                <Project />
+                {projectList.map((p)=>(
+                    <Project key={p.id} thumbnails={p.thumbnails} link={p.link} />
+
+                ))}
             </div>
         </div>
     )
