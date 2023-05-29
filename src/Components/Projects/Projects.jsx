@@ -1,5 +1,7 @@
 import Project from "../Project/Project"
 import { projectList } from "../../Global/ProjectsList"
+import img from "../../Assets/images/screencapture.png"
+
 
 import "./projects.scss"
 
@@ -16,7 +18,7 @@ const Projects = ()=>{
             </div>
             <div className="list">
                 {projectList.map((p)=>(
-                    <Project key={p.id} thumbnails={p.thumbnails} link={p.link} />
+                    <Project key={p.id} thumbnails={img} link={p.link} />
 
                 ))}
             </div>

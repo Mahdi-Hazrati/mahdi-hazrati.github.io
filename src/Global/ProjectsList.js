@@ -2,31 +2,31 @@ const projectList = [
     {
         id:1,
         pname:"Portfolio",
-        thumbnails:"http://localhost:3000/static/media/screencapture.16f15490fed9d8a89a3a.png",
+        thumbnails:"",
         link:"https://mahdi-hazrati.github.io/"
     },
     {
-        id:1,
+        id:2,
         pname:"Portfolio",
-        thumbnails:"http://localhost:3000/static/media/screencapture.16f15490fed9d8a89a3a.png",
+        thumbnails:"",
         link:"https://mahdi-hazrati.github.io/"
     },
     {
-        id:1,
+        id:3,
         pname:"Portfolio",
-        thumbnails:"http://localhost:3000/static/media/screencapture.16f15490fed9d8a89a3a.png",
+        thumbnails:"",
         link:"https://mahdi-hazrati.github.io/"
     },
     {
-        id:1,
+        id:4,
         pname:"Portfolio",
-        thumbnails:"http://localhost:3000/static/media/screencapture.16f15490fed9d8a89a3a.png",
+        thumbnails:"",
         link:"https://mahdi-hazrati.github.io/"
     },
     {
-        id:1,
+        id:5,
         pname:"Portfolio",
-        thumbnails:"http://localhost:3000/static/media/screencapture.16f15490fed9d8a89a3a.png",
+        thumbnails:"",
         link:"https://mahdi-hazrati.github.io/"
     },
 ]

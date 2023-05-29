@@ -1,0 +1,107 @@
+:root{
+    --theme-color: crimson
+}
+.contact{
+    height: 100vh;
+    position: relative;
+    .background{
+        width: 20px;
+        height: 100%;
+        background-color: var(--theme-color);
+        position: absolute;
+    }
+    .wrapper{
+        padding: 50px;
+        display: flex;
+
+        .left{
+            flex: 1;
+            .title{
+                font-weight: bold;
+                font-size: 60px;
+                width: 80%;
+            }
+            .info{
+                .item{
+                    display: flex;
+                    align-items: center;
+                    margin: 50px 0px;
+                    font-weight: 300;
+                    user-select: none;
+                    .icon{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                        color: var(--theme-color);
+                    }
+                }
+            }
+        }
+        .right{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .description{
+                font-weight: lighter;
+            }
+            form{
+                margin-top: 20px;
+                transition: 0.2s;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+
+                input{
+                    width: 100%;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    transition: 0.2s;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    margin: 10px 0px;
+                    font-size: 14px;
+                    padding-left: 10px;
+                    user-select: none;
+
+                    &:focus{
+                        border-bottom: 1px solid var(--theme-color);
+                    }
+                }
+                textarea{
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    margin: 10px 0px;
+                    font-size: 14px;
+                    padding-left: 10px;
+
+                    
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    &:focus{
+                        border: 1px solid var(--theme-color);
+                        
+                    }
+                }
+                button{
+                    background-color: var(--theme-color);
+                    color: white;
+                    transition: 0.2s;
+                    border: none;
+                    outline: none;
+                    font-weight: 500;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    &:hover{
+                        filter: brightness(98%);
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+    }
+}
