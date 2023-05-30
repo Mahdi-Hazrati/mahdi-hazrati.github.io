@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import "./contact.scss"
-import {Done, Email} from "@mui/icons-material"
+import {Email} from "@mui/icons-material"
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
