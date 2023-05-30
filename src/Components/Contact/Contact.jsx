@@ -1,6 +1,22 @@
+import { useRef, useState } from "react"
 import "./contact.scss"
-import {Email} from "@mui/icons-material"
+import {Done, Email} from "@mui/icons-material"
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
+    const formRef = useRef()
+    const [done, setDone] = useState(false)
+    function handleSubmitForm(event){
+        event.preventDefault()
+        emailjs.sendForm('service_zl4t2ls', 'template_doocqp8', formRef.current, 'aZU06nceXvU-wBFPc')
+        .then((result) => {
+            console.log(result.text);
+            setDone(true)
+        }, (error) => {
+            console.log(error.text);
+        });
+        
+    }
     return(
         <div className="contact">
             <div className="background"></div>
@@ -22,9 +38,13 @@ const Contact = () => {
                         i am here to cantribute on you Proejct.
                         <b>Let's Explain Your Idea.</b>
                     </div>
-                    <form>
+                    {done && (
+                        <p className="response">Thank You , i'll back you soon</p>
+                    )}
+
+                    <form ref={formRef} onSubmit={handleSubmitForm}>
                         <input type="text" name="user_name" placeholder="Your Name" />
-                        <input type="text" name="user_subjet" placeholder="Subject" />
+                        <input type="text" name="user_subject" placeholder="Subject" />
                         <input type="text" name="user_email" placeholder="Email" />
                         <textarea name="user_message" id="form-message"rows="5"></textarea>
                         <button>Submit</button>
