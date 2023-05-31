@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
-import "./contact.scss"
 import {Email} from "@mui/icons-material"
 import emailjs from '@emailjs/browser';
+import "./contact.scss"
 
 const Contact = () => {
     const formRef = useRef()
