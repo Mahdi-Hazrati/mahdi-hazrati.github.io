@@ -10,8 +10,8 @@
     position: fixed;
     border-radius: 20px;
     z-index: 990;
-    top: 0;
-    right: 0;
+    top: 10px;
+    left: 10px;
     overflow: hidden;
     cursor: pointer;
 
@@ -26,10 +26,13 @@
         background-color: rgba(0, 0, 0, 0.2);
         position: absolute;
         z-index: -1;
-        left: 0;
-        transition: 0.2s;
-    }
-    &:hover .button{
         left: 25px;
+        transition: 0.2s;
+        &.dark{
+            left: 0;
+        }
+        &.light{
+            left: 25px;
+        }
     }
 }

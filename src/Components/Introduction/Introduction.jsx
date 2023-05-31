@@ -1,6 +1,6 @@
-import "./introduction.scss"
 import ProfilePicture from "../../Assets/images/PngItem_503557.png"
 import { ArrowDownward } from "@mui/icons-material"
+import "./introduction.scss"
 
 const Introduction = () => {
     return (
