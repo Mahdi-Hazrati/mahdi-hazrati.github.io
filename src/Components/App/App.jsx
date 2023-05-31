@@ -1,12 +1,13 @@
-import "reset-default-style"
+import {useContext } from "react";
+import { ThemeContext } from "../../Context/ThemeContext";
 import Introduction from "../Introduction/Introduction";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
 import Toggle from "../Toggle/Toggle";
-import {useContext } from "react";
-import { ThemeContext } from "../../Context/ThemeContext";
+import "reset-default-style"
 import "../../Global/darkmode.scss"
+import "../../Global/responsive.scss"
 import "../../Global/font-face.scss"
 import './App.scss';
 

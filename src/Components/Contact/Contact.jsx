@@ -6,6 +6,7 @@ import "./contact.scss"
 const Contact = () => {
     const formRef = useRef()
     const [done, setDone] = useState(false)
+    
     function handleSubmitForm(event){
         event.preventDefault()
         emailjs.sendForm('service_zl4t2ls', 'template_doocqp8', formRef.current, 'aZU06nceXvU-wBFPc')
