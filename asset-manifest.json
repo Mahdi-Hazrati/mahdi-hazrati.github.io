@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ff880f5b.css",
+    "main.js": "/static/js/main.3b6ca572.js",
+    "static/media/PngItem_503557.png": "/static/media/PngItem_503557.cf13a58246772d940df9.png",
+    "static/media/mahdi-hazrati-profile-picture.jpg": "/static/media/mahdi-hazrati-profile-picture.21b7a74a1baba07ecaed.jpg",
+    "static/media/screencapture.png": "/static/media/screencapture.16f15490fed9d8a89a3a.png",
+    "static/media/Quicksand-Regular.ttf": "/static/media/Quicksand-Regular.eaaa0325196cfc4dc15b.ttf",
+    "static/media/Quicksand-Medium.ttf": "/static/media/Quicksand-Medium.7792600dd06c7375ffad.ttf",
+    "static/media/Quicksand-SemiBold.ttf": "/static/media/Quicksand-SemiBold.d730f269b7f1f4f263f3.ttf",
+    "static/media/Quicksand-Light.ttf": "/static/media/Quicksand-Light.75ad244f392abbeea049.ttf",
+    "static/media/Quicksand-Bold.ttf": "/static/media/Quicksand-Bold.4c95904387d18546c023.ttf",
+    "index.html": "/index.html",
+    "main.ff880f5b.css.map": "/static/css/main.ff880f5b.css.map",
+    "main.3b6ca572.js.map": "/static/js/main.3b6ca572.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff880f5b.css",
+    "static/js/main.3b6ca572.js"
+  ]
+}
