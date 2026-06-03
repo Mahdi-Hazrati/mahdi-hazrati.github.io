@@ -70,7 +70,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="mt-10 pt-10 border-t border-border/60 grid sm:grid-cols-3 gap-4">
+          <div className="mt-10 pt-10 border-t border-border/60 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
