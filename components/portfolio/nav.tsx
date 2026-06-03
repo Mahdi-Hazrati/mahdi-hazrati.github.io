@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { fadeUpItem, springSnappy, staggerContainer } from "@/lib/motion";
 import { navLinks, site } from "@/lib/portfolio";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,7 @@ export function Nav() {
       style={{
         backgroundColor: useTransform(
           backdrop,
-          (v) => `hsla(222, 47%, 6%, ${0.6 + v * 0.35})`
+          (v) => `hsl(var(--background) / ${0.72 + v * 0.23})`
         ),
       }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 backdrop-blur-md"
@@ -36,35 +37,40 @@ export function Nav() {
           </Link>
         </motion.div>
 
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <motion.a
-                href={link.href}
-                className="relative text-sm text-muted-foreground hover:text-foreground transition-colors"
-                whileHover={{ y: -2 }}
-                transition={springSnappy}
-              >
-                {link.label}
-                <motion.span
-                  className="absolute -bottom-1 left-0 h-px bg-accent origin-left"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <motion.a
+                  href={link.href}
+                  className="relative text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  whileHover={{ y: -2 }}
                   transition={springSnappy}
-                  style={{ width: "100%" }}
-                />
-              </motion.a>
-            </li>
-          ))}
-        </ul>
+                >
+                  {link.label}
+                  <motion.span
+                    className="absolute -bottom-1 left-0 h-px bg-accent origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={springSnappy}
+                    style={{ width: "100%" }}
+                  />
+                </motion.a>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
-        <motion.button
-          type="button"
-          className="md:hidden p-2 text-muted-foreground hover:text-foreground"
-          onClick={() => setOpen(!open)}
-          whileTap={{ scale: 0.9 }}
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
+        <div className="flex md:hidden items-center gap-2">
+          <ThemeToggle />
+          <motion.button
+            type="button"
+            className="p-2 text-muted-foreground hover:text-foreground"
+            onClick={() => setOpen(!open)}
+            whileTap={{ scale: 0.9 }}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
           <AnimatePresence mode="wait">
             {open ? (
               <motion.span
@@ -88,7 +94,8 @@ export function Nav() {
               </motion.span>
             )}
           </AnimatePresence>
-        </motion.button>
+          </motion.button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -117,6 +124,10 @@ export function Nav() {
                   </a>
                 </motion.li>
               ))}
+              <motion.li variants={fadeUpItem} className="flex items-center gap-2 pt-2">
+                <span className="text-sm text-muted-foreground">Theme</span>
+                <ThemeToggle />
+              </motion.li>
             </motion.ul>
           </motion.div>
         )}

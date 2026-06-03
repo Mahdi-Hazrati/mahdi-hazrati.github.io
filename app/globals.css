@@ -4,6 +4,31 @@
 
 @layer base {
   :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 214 32% 93%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 93%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 187 85% 38%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 187 85% 38%;
+    --radius: 0.625rem;
+    --grid-line: 214 32% 90%;
+    --glow-secondary: 262 55% 52%;
+  }
+
+  .dark {
     --background: 222 47% 6%;
     --foreground: 210 40% 96%;
     --card: 222 40% 9%;
@@ -23,7 +48,6 @@
     --border: 217 33% 18%;
     --input: 217 33% 18%;
     --ring: 187 85% 48%;
-    --radius: 0.625rem;
     --grid-line: 217 33% 14%;
     --glow-secondary: 262 70% 58%;
   }
@@ -36,10 +60,16 @@
 
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    transition: background-color 0.35s ease, color 0.35s ease;
   }
 
   ::selection {
