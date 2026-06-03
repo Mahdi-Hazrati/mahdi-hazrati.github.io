@@ -7,6 +7,7 @@ import { Experience } from "@/components/portfolio/experience";
 import { Footer } from "@/components/portfolio/footer";
 import { GridBackground } from "@/components/portfolio/grid-background";
 import { Hero } from "@/components/portfolio/hero";
+import { BadAppleEgg } from "@/components/portfolio/bad-apple-egg";
 import { KonamiEgg } from "@/components/portfolio/konami-egg";
 import { Nav } from "@/components/portfolio/nav";
 import { Projects } from "@/components/portfolio/projects";
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <GridBackground />
       <KonamiEgg />
+      <BadAppleEgg />
       <Nav />
       <motion.main
         initial={{ opacity: 0 }}

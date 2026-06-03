@@ -29,8 +29,14 @@ export function Footer() {
             {site.domain}
           </motion.a>
         </p>
-        <p className="font-mono text-xs opacity-60" title="Konami code hint">
-          ↑↑↓↓←→←→BA
+        <p className="font-mono text-xs opacity-60 flex items-center gap-3">
+          <span title="Konami code">↑↑↓↓←→←→BA</span>
+          <span className="opacity-40" aria-hidden>
+            ·
+          </span>
+          <span title="Type: badapple" className="opacity-50 hover:opacity-80 transition-opacity">
+            🍎
+          </span>
         </p>
       </div>
     </motion.footer>
