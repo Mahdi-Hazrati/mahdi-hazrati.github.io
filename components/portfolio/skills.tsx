@@ -1,6 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  cardHover,
+  fadeUpItem,
+  springSmooth,
+  staggerContainer,
+  tweenSmooth,
+  viewport,
+} from "@/lib/motion";
 import { skillGroups } from "@/lib/portfolio";
 import { SectionHeader } from "./section-header";
 
@@ -14,41 +22,57 @@ export function Skills() {
           description="From UI polish to shipping — tools I know well and keep sharpening."
         />
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillGroups.map((group, gi) => (
+        <motion.div
+          className="grid md:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          variants={staggerContainer}
+        >
+          {skillGroups.map((group) => (
             <motion.div
               key={group.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: gi * 0.1 }}
+              variants={fadeUpItem}
+              initial="rest"
+              whileHover="hover"
               className="rounded-xl border border-border/80 bg-card/40 p-6"
             >
-              <h3 className="font-mono text-sm text-accent mb-6">{group.name}</h3>
-              <ul className="space-y-5">
-                {group.skills.map((skill) => (
-                  <li key={skill.name}>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span>{skill.name}</span>
-                      <span className="text-muted-foreground font-mono text-xs">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-muted overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="h-full rounded-full bg-gradient-to-r from-accent to-glow-secondary"
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <motion.div variants={cardHover}>
+                <h3 className="font-mono text-sm text-accent mb-6">{group.name}</h3>
+                <ul className="space-y-5">
+                  {group.skills.map((skill, si) => (
+                    <motion.li
+                      key={skill.name}
+                      initial={{ opacity: 0, x: -8 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={viewport}
+                      transition={{ ...tweenSmooth, delay: si * 0.05 }}
+                    >
+                      <div className="flex justify-between text-sm mb-2">
+                        <span>{skill.name}</span>
+                        <span className="text-muted-foreground font-mono text-xs">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0, opacity: 0.6 }}
+                          whileInView={{ width: `${skill.level}%`, opacity: 1 }}
+                          viewport={viewport}
+                          transition={{
+                            ...springSmooth,
+                            delay: si * 0.08,
+                          }}
+                          className="h-full rounded-full bg-gradient-to-r from-accent via-accent/80 to-glow-secondary"
+                        />
+                      </div>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

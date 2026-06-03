@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { About } from "@/components/portfolio/about";
 import { Contact } from "@/components/portfolio/contact";
 import { Experience } from "@/components/portfolio/experience";
@@ -15,14 +18,18 @@ export default function Home() {
       <GridBackground />
       <KonamiEgg />
       <Nav />
-      <main>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      >
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Experience />
         <Contact />
-      </main>
+      </motion.main>
       <Footer />
     </>
   );

@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 import { Copy, Mail, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import {
+  fadeUp,
+  fadeUpItem,
+  scaleIn,
+  springSnappy,
+  staggerContainer,
+  viewport,
+} from "@/lib/motion";
 import { site, socialLinks } from "@/lib/portfolio";
 import { SectionHeader } from "./section-header";
 
@@ -29,61 +37,81 @@ export function Contact() {
         />
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          variants={fadeUp}
+          whileHover={{ scale: 1.005 }}
+          transition={springSnappy}
           className="rounded-2xl border border-border/80 bg-gradient-to-br from-card/80 to-accent/5 p-8 md:p-12"
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div>
+            <motion.div variants={fadeUpItem}>
               <p className="font-mono text-sm text-muted-foreground mb-2">
                 Preferred channel
               </p>
-              <a
+              <motion.a
                 href={`mailto:${site.email}`}
-                className="text-2xl md:text-3xl font-semibold hover:text-accent transition-colors break-all"
+                className="text-2xl md:text-3xl font-semibold hover:text-accent transition-colors break-all inline-block"
+                whileHover={{ x: 4 }}
+                transition={springSnappy}
               >
                 {site.email}
-              </a>
+              </motion.a>
               <p className="mt-4 text-muted-foreground flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-accent" aria-hidden />
+                <MessageCircle className="w-4 h-4 text-accent animate-pulse-soft" aria-hidden />
                 Based in {site.location} · Remote-friendly
               </p>
-            </div>
+            </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button
+              <motion.button
                 type="button"
                 onClick={copyEmail}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border bg-card hover:border-accent/50 transition-colors"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                transition={springSnappy}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border bg-card hover:border-accent/50"
               >
                 <Copy className="w-4 h-4" aria-hidden />
                 {copied ? "Copied!" : "Copy email"}
-              </button>
-              <a
+              </motion.button>
+              <motion.a
                 href={`mailto:${site.email}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-medium hover:opacity-90 transition-opacity"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                transition={springSnappy}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-medium shadow-lg shadow-accent/20"
               >
                 <Mail className="w-4 h-4" aria-hidden />
                 Send email
-              </a>
+              </motion.a>
             </div>
           </div>
 
-          <div className="mt-10 pt-10 border-t border-border/60 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <motion.div
+            className="mt-10 pt-10 border-t border-border/60 grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             {socialLinks.map((link) => (
-              <a
+              <motion.a
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg border border-border/60 p-4 hover:border-accent/40 hover:bg-card/50 transition-colors"
+                variants={fadeUpItem}
+                whileHover={{ y: -4, borderColor: "hsl(var(--accent) / 0.4)" }}
+                transition={springSnappy}
+                className="rounded-lg border border-border/60 p-4 hover:bg-card/50"
               >
                 <p className="font-medium">{link.name}</p>
                 <p className="text-sm text-muted-foreground mt-1">{link.handle}</p>
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

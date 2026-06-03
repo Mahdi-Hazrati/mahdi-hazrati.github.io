@@ -45,6 +45,58 @@
   ::selection {
     @apply bg-accent/30 text-foreground;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.grid-drift {
+  animation: grid-drift 28s linear infinite;
+}
+
+.glow-float {
+  animation: glow-float 14s ease-in-out infinite;
+}
+
+.glow-float-delayed {
+  animation: glow-float 18s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+@keyframes grid-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(64px, 64px);
+  }
+}
+
+@keyframes glow-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  33% {
+    transform: translate(24px, -18px) scale(1.06);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translate(-16px, 12px) scale(0.96);
+    opacity: 0.4;
+  }
 }
 
 .cursor-blink {

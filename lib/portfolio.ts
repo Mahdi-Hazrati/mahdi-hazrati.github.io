@@ -123,16 +123,6 @@ export const projects = [
     year: "2025",
   },
   {
-    title: "baskon.ir",
-    description:
-      "Community discussion space—«بس کن ایرانی!»—encouraging healthier conversations. One of my most-starred open-source projects on GitHub.",
-    tags: ["JavaScript", "Community", "Open Source"],
-    href: "https://github.com/mahdi-hazrati/baskon.ir",
-    github: "https://github.com/mahdi-hazrati/baskon.ir",
-    featured: true,
-    year: "2025",
-  },
-  {
     title: "Breakthrough",
     description:
       "Neuroscience-based habit tracker by Next Production—TypeScript app focused on sustainable behavior change.",
@@ -159,7 +149,7 @@ export const projects = [
     tags: ["Next.js", "Framer Motion", "Tailwind"],
     href: "https://mahdi.is-a.dev",
     github: "https://github.com/mahdi-hazrati/mahdi.is-a.dev",
-    featured: false,
+    featured: true,
     year: "2024",
   },
   {
@@ -221,5 +211,5 @@ export const nowBuilding = [
 export const stats = [
   { value: "6+", label: "Years in software" },
   { value: "150+", label: "Public GitHub repos" },
-  { value: "60+", label: "Stars on baskon.ir" },
+  { value: "4+", label: "Studio products" },
 ] as const;

@@ -1,9 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+import {
+  fadeUpItem,
+  springSnappy,
+  springSmooth,
+  staggerContainer,
+  tweenSmooth,
+} from "@/lib/motion";
 import { roles, site, socialLinks } from "@/lib/portfolio";
+
+const terminalLines = [
+  { type: "cmd" as const, text: "whoami" },
+  { type: "out" as const, text: site.name, large: true },
+  { type: "cmd" as const, text: "cat role.txt" },
+  { type: "role" as const },
+  { type: "cmd" as const, text: `echo "${site.tagline}"` },
+];
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -11,17 +26,22 @@ export function Hero() {
   useEffect(() => {
     const id = setInterval(() => {
       setRoleIndex((i) => (i + 1) % roles.length);
-    }, 2800);
+    }, 3200);
     return () => clearInterval(id);
   }, []);
 
   return (
     <section className="min-h-screen flex flex-col justify-center pt-24 pb-16 px-6">
-      <div className="max-w-5xl mx-auto w-full">
+      <motion.div
+        className="max-w-5xl mx-auto w-full"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+      >
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          variants={fadeUpItem}
+          whileHover={{ scale: 1.02 }}
+          transition={springSnappy}
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/80 bg-card/50 text-sm text-muted-foreground mb-8"
         >
           <span className="relative flex h-2 w-2">
@@ -32,103 +52,140 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          variants={fadeUpItem}
+          whileHover={{ y: -4 }}
+          transition={springSmooth}
           className="rounded-xl border border-border/80 bg-card/40 backdrop-blur-sm overflow-hidden mb-10 shadow-2xl shadow-black/20"
         >
           <div className="flex items-center gap-2 px-4 py-3 border-b border-border/60 bg-muted/30">
-            <span className="w-3 h-3 rounded-full bg-red-500/80" />
-            <span className="w-3 h-3 rounded-full bg-amber-500/80" />
-            <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
+            {["bg-red-500/80", "bg-amber-500/80", "bg-emerald-500/80"].map((c) => (
+              <motion.span
+                key={c}
+                className={`w-3 h-3 rounded-full ${c}`}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ ...springSnappy, delay: 0.1 }}
+              />
+            ))}
             <span className="ml-2 font-mono text-xs text-muted-foreground">
               ~/welcome — zsh
             </span>
           </div>
-          <div className="p-6 md:p-8 font-mono text-sm md:text-base space-y-3">
-            <p>
-              <span className="text-accent">$</span> whoami
-            </p>
-            <p className="text-foreground text-lg md:text-2xl font-semibold font-sans tracking-tight">
-              {site.name}
-            </p>
-            <p>
-              <span className="text-accent">$</span> cat role.txt
-            </p>
-            <p className="text-muted-foreground h-8">
-              <motion.span
-                key={roleIndex}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-accent inline-block"
-              >
-                {roles[roleIndex]}
-              </motion.span>
-              <span className="cursor-blink text-accent ml-0.5">|</span>
-            </p>
-            <p>
-              <span className="text-accent">$</span> echo &quot;{site.tagline}&quot;
-            </p>
-          </div>
+          <motion.div
+            className="p-6 md:p-8 font-mono text-sm md:text-base space-y-3"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            {terminalLines.map((line, i) => {
+              if (line.type === "role") {
+                return (
+                  <motion.p
+                    key="role"
+                    variants={fadeUpItem}
+                    className="text-muted-foreground h-8 overflow-hidden"
+                  >
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={roleIndex}
+                        initial={{ opacity: 0, y: 14, filter: "blur(4px)" }}
+                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        exit={{ opacity: 0, y: -14, filter: "blur(4px)" }}
+                        transition={tweenSmooth}
+                        className="text-accent inline-block"
+                      >
+                        {roles[roleIndex]}
+                      </motion.span>
+                    </AnimatePresence>
+                    <span className="cursor-blink text-accent ml-0.5">|</span>
+                  </motion.p>
+                );
+              }
+              if (line.type === "cmd") {
+                return (
+                  <motion.p key={i} variants={fadeUpItem}>
+                    <span className="text-accent">$</span> {line.text}
+                  </motion.p>
+                );
+              }
+              if (line.type === "out") {
+                return (
+                  <motion.p
+                    key={i}
+                    variants={fadeUpItem}
+                    className={`text-foreground font-semibold font-sans tracking-tight ${
+                      line.large ? "text-lg md:text-2xl" : ""
+                    }`}
+                  >
+                    {line.text}
+                  </motion.p>
+                );
+              }
+              return null;
+            })}
+          </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-4"
-        >
-          <a
+        <motion.div variants={fadeUpItem} className="flex flex-wrap gap-4">
+          <motion.a
             href={site.cvUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-medium hover:opacity-90 transition-opacity"
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            transition={springSnappy}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-medium shadow-lg shadow-accent/20"
           >
             <Download className="w-4 h-4" aria-hidden />
             Download CV
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#projects"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-card/50 hover:bg-card transition-colors"
+            whileHover={{ scale: 1.04, y: -2, borderColor: "hsl(var(--accent) / 0.5)" }}
+            whileTap={{ scale: 0.98 }}
+            transition={springSnappy}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-card/50 hover:bg-card/80"
           >
             <Sparkles className="w-4 h-4 text-accent" aria-hidden />
             View work
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          variants={staggerContainer}
           className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground"
         >
-          {socialLinks.map((link) => (
-            <a
+          {socialLinks.map((link, i) => (
+            <motion.a
               key={link.name}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
+              variants={fadeUpItem}
+              custom={i}
+              whileHover={{ x: 4, color: "hsl(var(--accent))" }}
+              transition={springSnappy}
+              className="hover:text-accent"
             >
               <span className="text-foreground font-medium">{link.name}</span>
               <span className="mx-2 text-border">/</span>
               {link.handle}
-            </a>
+            </motion.a>
           ))}
         </motion.div>
 
         <motion.a
           href="#about"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-20 inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mx-auto md:mx-0"
+          variants={fadeUpItem}
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="mt-20 inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors md:mx-0 mx-auto"
           aria-label="Scroll to about"
         >
           <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
-          <ArrowDown className="w-4 h-4 animate-bounce" />
+          <ArrowDown className="w-4 h-4" />
         </motion.a>
-      </div>
+      </motion.div>
     </section>
   );
 }

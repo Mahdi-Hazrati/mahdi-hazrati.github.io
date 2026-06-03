@@ -82,6 +82,14 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateY(16px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
+        },
+        'pulse-soft': {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.7' },
+        },
         'accordion-down': {
           from: {
             height: '0',
@@ -101,6 +109,8 @@ const config: Config = {
       },
       animation: {
         'fade-up': 'fade-up 0.5s ease-out forwards',
+        shimmer: 'shimmer 4s ease-in-out infinite',
+        'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
