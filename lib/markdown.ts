@@ -1,5 +1,7 @@
 import { visit } from "unist-util-visit";
 import type { Root } from "hast";
+import type { Options } from "rehype-pretty-code";
+import { CODE_THEMES } from "./code-highlight";
 
 /** Adds data-language and data-filename from pretty-code meta for UI chrome. */
 export function rehypeCodeMeta() {
@@ -15,7 +17,7 @@ export function rehypeCodeMeta() {
       const lang =
         (code.properties?.className as string[] | undefined)
           ?.find((c) => c.startsWith("language-"))
-          ?.replace("language-", "") ?? "text";
+          ?.replace("language-", "") ?? "plaintext";
 
       node.properties = {
         ...node.properties,
@@ -31,17 +33,15 @@ export function rehypeCodeMeta() {
   };
 }
 
-export const PRETTY_CODE_OPTIONS = {
+export const PRETTY_CODE_OPTIONS: Options = {
   theme: {
-    dark: "one-dark-pro",
-    light: "github-light",
+    dark: CODE_THEMES.dark,
+    light: CODE_THEMES.light,
   },
   keepBackground: false,
   defaultLang: "plaintext",
   grid: true,
-  showLineNumbers: true,
-  defaultLineNumbers: true,
-  bypassInlineCodeClassName: true,
+  bypassInlineCode: true,
   filterMetaString: (meta: string) =>
     meta
       .replace(/filename="([^"]+)"/g, "")
@@ -64,4 +64,4 @@ export const PRETTY_CODE_OPTIONS = {
       "chars--highlighted",
     ];
   },
-} as const;
+};

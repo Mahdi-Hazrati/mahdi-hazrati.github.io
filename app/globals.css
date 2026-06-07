@@ -457,6 +457,34 @@
   word-break: break-word;
 }
 
+/* Shiki syntax highlighting — dual theme for next-themes class strategy */
+.blog-prose pre code span,
+.code-viewer-content span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+  font-style: var(--shiki-light-font-style);
+  font-weight: var(--shiki-light-font-weight);
+  text-decoration: var(--shiki-light-text-decoration);
+}
+
+.dark .blog-prose pre code span,
+.dark .code-viewer-content span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+  font-style: var(--shiki-dark-font-style);
+  font-weight: var(--shiki-dark-font-weight);
+  text-decoration: var(--shiki-dark-text-decoration);
+}
+
+/* Inline code — not Shiki tokens */
+.blog-prose :not(pre) > code span {
+  color: inherit;
+  background-color: transparent;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}
+
 /* Code blocks — terminal chrome via PostContent + pretty-code */
 .blog-prose figure.code-block-figure,
 .blog-prose figure[data-rehype-pretty-code-figure] {
@@ -508,6 +536,34 @@
 
 .blog-prose pre:not(figure pre) code {
   @apply bg-transparent p-0 text-[0.8125rem];
+}
+
+/* Code viewer — expanded panel inherits pretty-code tokens */
+.code-viewer-panel {
+  @apply bg-card/20;
+}
+
+.code-viewer-content [data-line] {
+  @apply px-5 border-l-2 border-transparent block;
+}
+
+.code-viewer-content .line--highlighted {
+  @apply bg-accent/10 border-l-accent;
+}
+
+.code-viewer-content .chars--highlighted {
+  @apply bg-accent/20 rounded-sm;
+}
+
+.code-viewer-content[data-line-numbers] > [data-line]::before,
+.code-viewer-content [data-line-numbers] > [data-line]::before {
+  @apply inline-block w-8 mr-4 text-right text-muted-foreground/40 font-mono text-xs select-none;
+  counter-increment: line;
+  content: counter(line);
+}
+
+.code-viewer-content {
+  counter-reset: line;
 }
 
 /* Definition-style description lists from GFM tables adjacent content */
