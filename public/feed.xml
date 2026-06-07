@@ -5,7 +5,7 @@
     <link>https://mahdi.is-a.dev/blog</link>
     <description>Notes on React, Next.js, design systems, and shipping products.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 05:38:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 06:10:12 GMT</lastBuildDate>
     <atom:link href="https://mahdi.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
@@ -19,6 +19,56 @@
       <category>Reference</category>
     </item>
     <item>
+      <title><![CDATA[Perlin Noise: The Algorithm Behind Procedural Worlds]]></title>
+      <link>https://mahdi.is-a.dev/blog/perlin-noise-explained</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/perlin-noise-explained</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[How Ken Perlin's gradient noise creates infinite terrain, clouds, and fire — and why Simplex improved it thirty years later.]]></description>
+      <category>Graphics</category>
+      <category>Algorithms</category>
+      <category>Procedural</category>
+    </item>
+    <item>
+      <title><![CDATA[Transformers Explained: Attention, QKV, and Why LLMs Work]]></title>
+      <link>https://mahdi.is-a.dev/blog/transformer-attention-explained</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/transformer-attention-explained</guid>
+      <pubDate>Wed, 28 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A frontend engineer's guide to the architecture behind GPT — self-attention, positional encoding, and the encoder-decoder split.]]></description>
+      <category>ML</category>
+      <category>Transformers</category>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title><![CDATA[Ray Marching and Signed Distance Fields]]></title>
+      <link>https://mahdi.is-a.dev/blog/ray-marching-sdf-shaders</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ray-marching-sdf-shaders</guid>
+      <pubDate>Sat, 24 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Render infinite geometry on a fullscreen triangle — SDFs, sphere tracing, and the shader loop that replaced polygon soup.]]></description>
+      <category>Shaders</category>
+      <category>WebGL</category>
+      <category>Graphics</category>
+    </item>
+    <item>
+      <title><![CDATA[Concurrent React: Suspense, Transitions, and Time Slicing]]></title>
+      <link>https://mahdi.is-a.dev/blog/concurrent-react-explained</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/concurrent-react-explained</guid>
+      <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[How React 18 schedules updates, keeps the UI responsive during heavy renders, and what useTransition actually buys you.]]></description>
+      <category>React</category>
+      <category>Performance</category>
+      <category>Frontend</category>
+    </item>
+    <item>
+      <title><![CDATA[B-Trees: Why Every Database Index Looks the Same]]></title>
+      <link>https://mahdi.is-a.dev/blog/b-trees-database-indexes</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/b-trees-database-indexes</guid>
+      <pubDate>Fri, 16 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[The data structure behind PostgreSQL, SQLite, and MySQL indexes — balanced trees, page alignment, and why O(log n) isn't enough.]]></description>
+      <category>Databases</category>
+      <category>Algorithms</category>
+      <category>Backend</category>
+    </item>
+    <item>
       <title><![CDATA[File-Based Blogs on Next.js Static Export]]></title>
       <link>https://mahdi.is-a.dev/blog/file-based-blog-with-nextjs</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/file-based-blog-with-nextjs</guid>
@@ -27,6 +77,56 @@
       <category>Next.js</category>
       <category>Markdown</category>
       <category>Static Export</category>
+    </item>
+    <item>
+      <title><![CDATA[WebAssembly Beyond the Browser]]></title>
+      <link>https://mahdi.is-a.dev/blog/webassembly-beyond-browser</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/webassembly-beyond-browser</guid>
+      <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[From Figma's design engine to Cloudflare Workers — why WASM is becoming the portable bytecode layer of the web stack.]]></description>
+      <category>WebAssembly</category>
+      <category>Systems</category>
+      <category>Performance</category>
+    </item>
+    <item>
+      <title><![CDATA[Raft Consensus: Leader Election Without the PhD]]></title>
+      <link>https://mahdi.is-a.dev/blog/raft-consensus-explained</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/raft-consensus-explained</guid>
+      <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[How distributed systems agree on a log when nodes fail — terms, heartbeats, and why Paxos stayed in papers while Raft got textbooks.]]></description>
+      <category>Distributed Systems</category>
+      <category>Algorithms</category>
+      <category>Backend</category>
+    </item>
+    <item>
+      <title><![CDATA[Gradient Descent: The Hill-Climbing Algorithm Behind Deep Learning]]></title>
+      <link>https://mahdi.is-a.dev/blog/gradient-descent-deep-learning</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/gradient-descent-deep-learning</guid>
+      <pubDate>Sun, 04 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Loss surfaces, learning rates, momentum, and Adam — the optimization loop that makes neural networks actually learn.]]></description>
+      <category>ML</category>
+      <category>Math</category>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title><![CDATA[OAuth2 + PKCE: Auth for Modern Single-Page Apps]]></title>
+      <link>https://mahdi.is-a.dev/blog/oauth2-pkce-spa-security</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/oauth2-pkce-spa-security</guid>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Why implicit flow died, how PKCE protects public clients, and the token flow every React app should implement.]]></description>
+      <category>Security</category>
+      <category>OAuth</category>
+      <category>Web</category>
+    </item>
+    <item>
+      <title><![CDATA[Git Internals: Objects, Refs, and the DAG Under the Hood]]></title>
+      <link>https://mahdi.is-a.dev/blog/git-internals-objects-and-refs</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/git-internals-objects-and-refs</guid>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Git isn't a filesystem with history — it's a content-addressed object database with labels. Once you see the DAG, everything clicks.]]></description>
+      <category>Git</category>
+      <category>Tools</category>
+      <category>DevOps</category>
     </item>
     <item>
       <title><![CDATA[Design Systems That Actually Ship]]></title>

@@ -74,7 +74,6 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
-      <ReadingProgress />
       <ArticleJsonLd post={post} />
       <main className="pt-24 pb-24 px-6 min-h-screen">
         <div className="max-w-5xl mx-auto">
@@ -143,7 +142,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 />
               )}
 
-              <PostContent html={post.html} />
+              <ReadingProgress>
+                <PostContent html={post.html} />
+              </ReadingProgress>
 
               <PostNavigation prev={prev} next={next} />
               <RelatedPosts posts={related} />
