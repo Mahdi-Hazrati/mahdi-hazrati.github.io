@@ -16,9 +16,9 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
         title="Continue reading"
         description="More notes on similar topics."
       />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
         {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
+          <PostCard key={post.slug} post={post} variant="related" />
         ))}
       </div>
     </section>

@@ -24,7 +24,7 @@ Static export (`output: 'export'`) on Next.js 13+ makes this especially clean. S
 
 A typical setup looks like this:
 
-```typescript
+```typescript title="lib/blog.ts" {2,8-12}
 // lib/blog.ts — simplified
 import fs from "fs";
 import matter from "gray-matter";
@@ -42,7 +42,7 @@ export async function getPostBySlug(slug: string) {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
-    .use(rehypePrettyCode, { theme: "github-dark-dimmed" })
+    .use(rehypePrettyCode, { theme: "one-dark-pro" })
     .use(rehypeStringify)
     .process(content);
   return { ...data, html: String(html) };
@@ -50,6 +50,25 @@ export async function getPostBySlug(slug: string) {
 ```
 
 Frontmatter holds metadata; the body stays pure markdown.
+
+### Supported markdown features
+
+- **GFM tables**, ~~strikethrough~~, and `inline code`
+- Task lists with checkboxes
+- GitHub alerts, footnotes[^1], and autolinks like https://nextjs.org
+- Syntax highlighting with line numbers, filenames, and `{line}` highlights
+
+[^1]: Footnotes render at the bottom of the post — great for citations without breaking reading flow.
+
+- [x] Parse markdown at build time
+- [x] Highlight code with Shiki themes
+- [ ] Client-side CMS (not needed yet)
+
+> [!TIP]
+> Use `published: false` in frontmatter to keep drafts out of production builds.
+
+> [!WARNING]
+> Static export means no runtime API routes — pre-generate RSS and sitemaps during `next build`.
 
 ## SEO without a server
 

@@ -210,12 +210,38 @@
   @apply mt-5;
 }
 
+.blog-prose h1 {
+  @apply text-3xl font-bold tracking-tight mt-12 mb-4 scroll-mt-24;
+}
+
 .blog-prose h2 {
   @apply text-2xl font-bold tracking-tight mt-12 mb-4 scroll-mt-24;
 }
 
 .blog-prose h3 {
   @apply text-xl font-semibold tracking-tight mt-8 mb-3 scroll-mt-24;
+}
+
+.blog-prose h4 {
+  @apply text-lg font-semibold tracking-tight mt-6 mb-2 scroll-mt-24;
+}
+
+.blog-prose h5 {
+  @apply text-base font-semibold mt-4 mb-2 scroll-mt-24;
+}
+
+.blog-prose h6 {
+  @apply text-sm font-semibold uppercase tracking-wider text-muted-foreground mt-4 mb-2 scroll-mt-24;
+}
+
+.blog-prose .heading-anchor {
+  @apply no-underline text-inherit;
+}
+
+.blog-prose h2 .heading-anchor,
+.blog-prose h3 .heading-anchor,
+.blog-prose h4 .heading-anchor {
+  @apply hover:text-accent transition-colors;
 }
 
 .blog-prose p {
@@ -226,8 +252,21 @@
   @apply text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors;
 }
 
+.blog-prose a.external-link::after {
+  content: "↗";
+  @apply ml-0.5 text-[0.75em] opacity-60;
+}
+
 .blog-prose strong {
   @apply text-foreground font-semibold;
+}
+
+.blog-prose em {
+  @apply italic;
+}
+
+.blog-prose del {
+  @apply line-through text-muted-foreground/70;
 }
 
 .blog-prose ul,
@@ -243,12 +282,71 @@
   @apply list-decimal;
 }
 
+.blog-prose li {
+  @apply leading-relaxed;
+}
+
 .blog-prose li::marker {
   @apply text-accent;
 }
 
+.blog-prose li > ul,
+.blog-prose li > ol {
+  @apply mt-2 mb-0;
+}
+
+/* GFM task lists */
+.blog-prose ul.contains-task-list {
+  @apply list-none pl-0;
+}
+
+.blog-prose li.task-list-item {
+  @apply flex items-start gap-2.5;
+}
+
+.blog-prose li.task-list-item input[type="checkbox"] {
+  @apply mt-1.5 h-4 w-4 rounded border-border accent-accent cursor-default;
+}
+
 .blog-prose blockquote {
   @apply border-l-2 border-accent/50 pl-5 italic text-muted-foreground my-8;
+}
+
+.blog-prose blockquote p {
+  @apply mt-0;
+}
+
+/* GitHub-style alerts (remark-gfm) */
+.blog-prose .markdown-alert {
+  @apply rounded-xl border px-5 py-4 my-8 not-italic;
+}
+
+.blog-prose .markdown-alert > :first-child {
+  @apply mt-0 font-semibold text-foreground not-italic;
+}
+
+.blog-prose .markdown-alert > :last-child {
+  @apply mb-0;
+}
+
+.blog-prose .markdown-alert-note {
+  @apply border-accent/30 bg-accent/5;
+}
+
+.blog-prose .markdown-alert-tip {
+  @apply border-emerald-500/30 bg-emerald-500/5;
+}
+
+.blog-prose .markdown-alert-important {
+  @apply border-glow-secondary/30 bg-glow-secondary/5;
+}
+
+.blog-prose .markdown-alert-warning {
+  @apply border-amber-500/30 bg-amber-500/5;
+}
+
+.blog-prose .markdown-alert-caution {
+  @apply border-red-500/30 bg-red-500/5;
 }
 
 .blog-prose hr {
@@ -256,45 +354,176 @@
 }
 
 .blog-prose table {
-  @apply w-full text-sm my-8 border-collapse;
+  @apply w-full text-sm my-8 border-collapse overflow-hidden rounded-xl border border-border/80;
+  display: block;
+  overflow-x: auto;
+}
+
+.blog-prose thead {
+  @apply bg-muted/40;
 }
 
 .blog-prose th {
-  @apply border border-border/80 bg-muted/40 px-4 py-2 text-left font-semibold text-foreground;
+  @apply border-b border-border/80 px-4 py-3 text-left font-semibold text-foreground whitespace-nowrap;
 }
 
 .blog-prose td {
-  @apply border border-border/60 px-4 py-2 text-muted-foreground;
+  @apply border-b border-border/40 px-4 py-3 text-muted-foreground;
 }
 
-.blog-prose pre {
-  @apply my-8 rounded-xl border border-border/80 bg-card/60 overflow-x-auto text-sm;
+.blog-prose tbody tr:last-child td {
+  @apply border-b-0;
 }
 
-.blog-prose pre code {
-  @apply block p-5 font-mono text-[0.8125rem] leading-relaxed;
-  background: transparent !important;
+.blog-prose tbody tr:hover {
+  @apply bg-muted/20;
 }
 
-.blog-prose :not(pre) > code {
-  @apply px-1.5 py-0.5 rounded-md bg-muted/60 font-mono text-[0.875em] text-accent;
+/* Images & figures */
+.blog-prose img {
+  @apply rounded-xl border border-border/80 my-8 max-w-full h-auto;
 }
 
-.blog-prose pre[data-theme="light"],
-.blog-prose pre[data-theme="dark"] {
-  @apply bg-card/60;
-}
-
-.blog-prose figure[data-rehype-pretty-code-figure] {
+.blog-prose figure:not([data-rehype-pretty-code-figure]) {
   @apply my-8;
 }
 
-.blog-prose [data-line-numbers] {
+.blog-prose figcaption {
+  @apply text-center text-sm text-muted-foreground font-mono mt-3;
+}
+
+/* Media embeds — YouTube, video, audio */
+.blog-prose .media-embed {
+  @apply my-8 rounded-xl border border-border/80 bg-card/40 overflow-hidden;
+}
+
+.blog-prose .media-embed-youtube .media-embed-frame {
+  @apply relative w-full aspect-video bg-muted/30;
+}
+
+.blog-prose .media-embed-youtube iframe {
+  @apply absolute inset-0 h-full w-full border-0;
+}
+
+.blog-prose .media-embed-video video {
+  @apply w-full max-h-[480px] bg-black object-contain;
+}
+
+.blog-prose .media-embed-audio {
+  @apply p-5 space-y-3;
+}
+
+.blog-prose .media-embed-audio .media-embed-label {
+  @apply text-sm font-mono text-muted-foreground m-0 text-left;
+}
+
+.blog-prose .media-embed-audio audio {
+  @apply w-full h-10;
+}
+
+.blog-prose .media-embed video,
+.blog-prose .media-embed audio {
+  @apply outline-none;
+}
+
+.blog-prose .media-embed figcaption {
+  @apply px-5 pb-4 pt-0 text-left m-0;
+}
+
+/* Footnotes (remark-gfm) */
+.blog-prose sup {
+  @apply text-accent;
+}
+
+.blog-prose a[data-footnote-ref] {
+  @apply no-underline text-xs font-mono px-1;
+}
+
+.blog-prose .footnotes {
+  @apply mt-16 pt-8 border-t border-border/40 text-sm;
+}
+
+.blog-prose .footnotes ol {
+  @apply pl-5 space-y-3;
+}
+
+.blog-prose .data-footnote-backref {
+  @apply no-underline ml-1;
+}
+
+/* Inline code */
+.blog-prose :not(pre) > code {
+  @apply px-1.5 py-0.5 rounded-md bg-muted/60 font-mono text-[0.875em] text-accent;
+  word-break: break-word;
+}
+
+/* Code blocks — terminal chrome via PostContent + pretty-code */
+.blog-prose figure.code-block-figure,
+.blog-prose figure[data-rehype-pretty-code-figure] {
+  @apply my-8 rounded-xl border border-border/80 bg-card/40 overflow-hidden shadow-lg shadow-black/10;
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] pre {
+  @apply m-0 rounded-none border-0 bg-transparent overflow-x-auto text-sm;
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] pre code {
+  @apply block py-4 px-0 font-mono text-[0.8125rem] leading-relaxed;
+  background: transparent !important;
   counter-reset: line;
 }
 
-.blog-prose [data-line-numbers] > [data-line]::before {
-  @apply inline-block w-8 mr-4 text-right text-muted-foreground/50 font-mono text-xs select-none;
+.blog-prose figure[data-rehype-pretty-code-figure] pre code [data-line] {
+  @apply px-5 border-l-2 border-transparent;
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] pre code [data-line]:empty::before,
+.blog-prose figure[data-rehype-pretty-code-figure] pre code [data-line=""]::before {
+  content: " ";
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] pre code .line--highlighted {
+  @apply bg-accent/10 border-l-accent;
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] pre code .chars--highlighted {
+  @apply bg-accent/20 rounded-sm;
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] code[data-line-numbers] > [data-line]::before {
+  @apply inline-block w-8 mr-4 text-right text-muted-foreground/40 font-mono text-xs select-none;
   counter-increment: line;
   content: counter(line);
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] pre[data-theme="dark"],
+.blog-prose figure[data-rehype-pretty-code-figure] pre[data-theme="light"] {
+  @apply bg-card/20;
+}
+
+/* Fallback pre blocks (no pretty-code) */
+.blog-prose pre:not(figure pre) {
+  @apply my-8 rounded-xl border border-border/80 bg-card/60 overflow-x-auto text-sm p-5 font-mono;
+}
+
+.blog-prose pre:not(figure pre) code {
+  @apply bg-transparent p-0 text-[0.8125rem];
+}
+
+/* Definition-style description lists from GFM tables adjacent content */
+.blog-prose dl {
+  @apply my-6 space-y-4;
+}
+
+.blog-prose dt {
+  @apply font-semibold text-foreground;
+}
+
+.blog-prose dd {
+  @apply text-muted-foreground pl-4 border-l border-border/60;
+}
+
+/* Keyboard shortcuts */
+.blog-prose kbd {
+  @apply inline-flex items-center px-1.5 py-0.5 rounded border border-border bg-muted/60 font-mono text-xs text-foreground shadow-sm;
 }

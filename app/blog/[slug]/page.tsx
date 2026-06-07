@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import { ArticleJsonLd } from "@/components/blog/json-ld";
+import { PostContent } from "@/components/blog/post-content";
+import { PostCover } from "@/components/blog/post-cover";
 import { PostNavigation } from "@/components/blog/post-navigation";
 import { ReadingProgress } from "@/components/blog/reading-progress";
 import { RelatedPosts } from "@/components/blog/related-posts";
@@ -16,6 +18,7 @@ import {
   getRelatedPosts,
   postUrl,
 } from "@/lib/blog";
+import { getPostCover } from "@/lib/blog-types";
 import { site } from "@/lib/portfolio";
 
 type PageProps = {
@@ -33,6 +36,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   const url = postUrl(post.slug);
+  const cover = getPostCover(post);
 
   return {
     title: `${post.title} — Mahdi Hazrati`,
@@ -49,10 +53,10 @@ export async function generateMetadata({
       url,
       siteName: site.domain,
       tags: post.tags,
-      ...(post.image ? { images: [{ url: post.image }] } : {}),
+      ...(cover ? { images: [{ url: cover.startsWith("http") ? cover : `https://${site.domain}${cover}` }] } : {}),
     },
     twitter: {
-      card: post.image ? "summary_large_image" : "summary",
+      card: cover ? "summary_large_image" : "summary",
       title: post.title,
       description: post.description,
     },
@@ -66,6 +70,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const related = getRelatedPosts(post.slug);
   const { prev, next } = getAdjacentPosts(post.slug);
   const url = postUrl(post.slug);
+  const cover = getPostCover(post);
 
   return (
     <>
@@ -129,10 +134,16 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
               </header>
 
-              <div
-                className="blog-prose"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
+              {cover && (
+                <PostCover
+                  src={cover}
+                  alt={post.title}
+                  className="mb-10"
+                  priority
+                />
+              )}
+
+              <PostContent html={post.html} />
 
               <PostNavigation prev={prev} next={next} />
               <RelatedPosts posts={related} />

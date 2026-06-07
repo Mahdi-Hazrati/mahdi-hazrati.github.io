@@ -8,7 +8,10 @@ export type BlogFrontmatter = {
   tags: string[];
   published?: boolean;
   featured?: boolean;
+  /** Open Graph / social share image */
   image?: string;
+  /** Card & post header cover — falls back to `image` */
+  thumbnail?: string;
 };
 
 export type TocHeading = {
@@ -51,4 +54,11 @@ export function slugifyHeading(text: string): string {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .trim();
+}
+
+export function getPostCover(post: {
+  thumbnail?: string;
+  image?: string;
+}): string | undefined {
+  return post.thumbnail ?? post.image;
 }

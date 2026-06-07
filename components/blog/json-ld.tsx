@@ -1,5 +1,5 @@
 import type { BlogPostMeta } from "@/lib/blog-types";
-import { postUrl, formatDate } from "@/lib/blog-types";
+import { postUrl, formatDate, getPostCover } from "@/lib/blog-types";
 import { site } from "@/lib/portfolio";
 
 type ArticleJsonLdProps = {
@@ -28,7 +28,7 @@ export function ArticleJsonLd({ post }: ArticleJsonLdProps) {
       "@id": postUrl(post.slug),
     },
     keywords: post.tags.join(", "),
-    ...(post.image ? { image: post.image } : {}),
+    ...(getPostCover(post) ? { image: getPostCover(post) } : {}),
   };
 
   return (

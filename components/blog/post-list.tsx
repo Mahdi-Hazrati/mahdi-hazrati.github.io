@@ -39,18 +39,18 @@ export function PostList({ posts, tags }: PostListProps) {
           className="space-y-10"
         >
           {featured.length > 0 && (
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 items-stretch">
               {featured.map((post) => (
-                <motion.div key={post.slug} variants={fadeUpItem}>
+                <motion.div key={post.slug} variants={fadeUpItem} className="h-full">
                   <PostCard post={post} />
                 </motion.div>
               ))}
             </div>
           )}
           {rest.length > 0 && (
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 items-stretch">
               {rest.map((post) => (
-                <motion.div key={post.slug} variants={fadeUpItem}>
+                <motion.div key={post.slug} variants={fadeUpItem} className="h-full">
                   <PostCard post={post} />
                 </motion.div>
               ))}
