@@ -199,3 +199,102 @@
     rgba(0, 0, 0, 0.65) 100%
   );
 }
+
+/* Blog prose — matches portfolio design system */
+.blog-prose {
+  @apply text-foreground leading-relaxed;
+  font-size: 1.0625rem;
+}
+
+.blog-prose > * + * {
+  @apply mt-5;
+}
+
+.blog-prose h2 {
+  @apply text-2xl font-bold tracking-tight mt-12 mb-4 scroll-mt-24;
+}
+
+.blog-prose h3 {
+  @apply text-xl font-semibold tracking-tight mt-8 mb-3 scroll-mt-24;
+}
+
+.blog-prose p {
+  @apply text-muted-foreground leading-[1.75];
+}
+
+.blog-prose a {
+  @apply text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors;
+}
+
+.blog-prose strong {
+  @apply text-foreground font-semibold;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  @apply pl-6 space-y-2 text-muted-foreground;
+}
+
+.blog-prose ul {
+  @apply list-disc;
+}
+
+.blog-prose ol {
+  @apply list-decimal;
+}
+
+.blog-prose li::marker {
+  @apply text-accent;
+}
+
+.blog-prose blockquote {
+  @apply border-l-2 border-accent/50 pl-5 italic text-muted-foreground my-8;
+}
+
+.blog-prose hr {
+  @apply border-border/60 my-12;
+}
+
+.blog-prose table {
+  @apply w-full text-sm my-8 border-collapse;
+}
+
+.blog-prose th {
+  @apply border border-border/80 bg-muted/40 px-4 py-2 text-left font-semibold text-foreground;
+}
+
+.blog-prose td {
+  @apply border border-border/60 px-4 py-2 text-muted-foreground;
+}
+
+.blog-prose pre {
+  @apply my-8 rounded-xl border border-border/80 bg-card/60 overflow-x-auto text-sm;
+}
+
+.blog-prose pre code {
+  @apply block p-5 font-mono text-[0.8125rem] leading-relaxed;
+  background: transparent !important;
+}
+
+.blog-prose :not(pre) > code {
+  @apply px-1.5 py-0.5 rounded-md bg-muted/60 font-mono text-[0.875em] text-accent;
+}
+
+.blog-prose pre[data-theme="light"],
+.blog-prose pre[data-theme="dark"] {
+  @apply bg-card/60;
+}
+
+.blog-prose figure[data-rehype-pretty-code-figure] {
+  @apply my-8;
+}
+
+.blog-prose [data-line-numbers] {
+  counter-reset: line;
+}
+
+.blog-prose [data-line-numbers] > [data-line]::before {
+  @apply inline-block w-8 mr-4 text-right text-muted-foreground/50 font-mono text-xs select-none;
+  counter-increment: line;
+  content: counter(line);
+}

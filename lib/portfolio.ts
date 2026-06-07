@@ -15,11 +15,12 @@ export const site = {
 } as const;
 
 export const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export const socialLinks = [

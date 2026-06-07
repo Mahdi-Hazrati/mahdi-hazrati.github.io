@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mahdi Hazrati — Tech Blog</title>
+    <link>https://mahdi.is-a.dev/blog</link>
+    <description>Notes on React, Next.js, design systems, and shipping products.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2026 05:06:25 GMT</lastBuildDate>
+    <atom:link href="https://mahdi.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title><![CDATA[File-Based Blogs on Next.js Static Export]]></title>
+      <link>https://mahdi.is-a.dev/blog/file-based-blog-with-nextjs</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/file-based-blog-with-nextjs</guid>
+      <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[How to ship a markdown blog with zero database, full SEO, and static export — the same stack powering mahdi.is-a.dev.]]></description>
+      <category>Next.js</category>
+      <category>Markdown</category>
+      <category>Static Export</category>
+    </item>
+    <item>
+      <title><![CDATA[Design Systems That Actually Ship]]></title>
+      <link>https://mahdi.is-a.dev/blog/design-systems-that-ship</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/design-systems-that-ship</guid>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Lessons from building NPUI — tokens, primitives, and the gap between Figma and production.]]></description>
+      <category>Design Systems</category>
+      <category>React</category>
+      <category>NPUI</category>
+    </item>
+    <item>
+      <title><![CDATA[Privacy-First Analytics Without the Tradeoffs]]></title>
+      <link>https://mahdi.is-a.dev/blog/privacy-first-analytics</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/privacy-first-analytics</guid>
+      <pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Building Analytick taught me that you can have real-time dashboards and respect user privacy — if you design constraints in from day one.]]></description>
+      <category>Analytics</category>
+      <category>Privacy</category>
+      <category>SaaS</category>
+    </item>
+  </channel>
+</rss>

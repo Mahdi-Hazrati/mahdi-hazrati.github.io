@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { fadeUpItem, springSnappy, staggerContainer } from "@/lib/motion";
 import { navLinks, site } from "@/lib/portfolio";
@@ -29,7 +30,7 @@ export function Nav() {
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <motion.div whileHover={{ x: 2 }} transition={springSnappy}>
           <Link
-            href="#"
+            href="/"
             className="font-mono text-sm font-medium text-foreground hover:text-accent transition-colors"
           >
             <span className="text-accent">~/</span>
@@ -41,21 +42,7 @@ export function Nav() {
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <motion.a
-                  href={link.href}
-                  className="relative text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  whileHover={{ y: -2 }}
-                  transition={springSnappy}
-                >
-                  {link.label}
-                  <motion.span
-                    className="absolute -bottom-1 left-0 h-px bg-accent origin-left"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={springSnappy}
-                    style={{ width: "100%" }}
-                  />
-                </motion.a>
+                <NavLink href={link.href} label={link.label} />
               </li>
             ))}
           </ul>
@@ -115,13 +102,13 @@ export function Nav() {
             >
               {navLinks.map((link) => (
                 <motion.li key={link.href} variants={fadeUpItem}>
-                  <a
+                  <Link
                     href={link.href}
                     className="block text-muted-foreground hover:text-accent transition-colors"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
               <motion.li variants={fadeUpItem} className="flex items-center gap-2 pt-2">
@@ -133,5 +120,33 @@ export function Nav() {
         )}
       </AnimatePresence>
     </motion.header>
+  );
+}
+
+function NavLink({ href, label }: { href: string; label: string }) {
+  const pathname = usePathname();
+  const isActive = href === "/blog" && pathname.startsWith("/blog");
+
+  return (
+    <motion.div whileHover={{ y: -2 }} transition={springSnappy}>
+      <Link
+        href={href}
+        className={`relative text-sm transition-colors ${
+          isActive
+            ? "text-accent font-medium"
+            : "text-muted-foreground hover:text-foreground"
+        }`}
+      >
+        {label}
+        <motion.span
+          className="absolute -bottom-1 left-0 h-px bg-accent origin-left"
+          initial={{ scaleX: isActive ? 1 : 0 }}
+          whileHover={{ scaleX: 1 }}
+          animate={{ scaleX: isActive ? 1 : 0 }}
+          transition={springSnappy}
+          style={{ width: "100%" }}
+        />
+      </Link>
+    </motion.div>
   );
 }
