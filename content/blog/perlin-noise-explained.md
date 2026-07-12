@@ -1,6 +1,6 @@
 ---
 title: "Perlin Noise: The Algorithm Behind Procedural Worlds"
-description: "How Ken Perlin's gradient noise creates infinite terrain, clouds, and fire — and why Simplex improved it thirty years later."
+description: "How Ken Perlin's gradient noise creates infinite terrain, clouds, and fire   and why Simplex improved it thirty years later."
 date: "2025-06-01"
 tags: ["Graphics", "Algorithms", "Procedural"]
 featured: true
@@ -8,14 +8,14 @@ published: true
 thumbnail: "/blog/thumbnails/perlin-noise.svg"
 ---
 
-Before Minecraft sold billions of blocks, Ken Perlin needed organic randomness for the 1982 film *Tron*. Pure random values look like static. Perlin noise looks like **nature** — smooth, continuous, and tileable.
+Before Minecraft sold billions of blocks, Ken Perlin needed organic randomness for the 1982 film *Tron*. Pure random values look like static. Perlin noise looks like **nature**   smooth, continuous, and tileable.
 
 ## The core idea
 
 Perlin noise assigns **gradient vectors** at each integer lattice point, then interpolates dot products for any sample position `(x, y, z)`.
 
 ```glsl
-// Conceptual 2D Perlin — simplified
+// Conceptual 2D Perlin   simplified
 float noise(vec2 p) {
   vec2 i = floor(p);
   vec2 f = fract(p);
@@ -30,7 +30,7 @@ float noise(vec2 p) {
 }
 ```
 
-The magic is **coherent interpolation** — neighboring samples change gradually, not chaotically.
+The magic is **coherent interpolation**   neighboring samples change gradually, not chaotically.
 
 ## Octaves and fBm
 
@@ -49,11 +49,11 @@ function fbm(x, y, octaves = 6) {
 }
 ```
 
-Each octave adds detail at half the amplitude and double the frequency — coastlines, then hills, then rocks.
+Each octave adds detail at half the amplitude and double the frequency   coastlines, then hills, then rocks.
 
 ## Simplex noise
 
-Classic Perlin has **directional artifacts** (cube-grid bias). Simplex noise uses a triangular/simplex grid — fewer artifacts, better in high dimensions. Most modern engines default to Simplex or OpenSimplex2.
+Classic Perlin has **directional artifacts** (cube-grid bias). Simplex noise uses a triangular/simplex grid   fewer artifacts, better in high dimensions. Most modern engines default to Simplex or OpenSimplex2.
 
 ## Where you'll see it
 
@@ -66,4 +66,4 @@ Classic Perlin has **directional artifacts** (cube-grid bias). Simplex noise use
 
 ## Takeaway
 
-Perlin noise is a masterclass in **structured randomness**. Once you understand lattice gradients and interpolation, you unlock an entire class of procedural algorithms — from terrain to turbulence to domain warping.
+Perlin noise is a masterclass in **structured randomness**. Once you understand lattice gradients and interpolation, you unlock an entire class of procedural algorithms   from terrain to turbulence to domain warping.

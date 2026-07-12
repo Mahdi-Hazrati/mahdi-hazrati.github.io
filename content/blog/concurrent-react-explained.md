@@ -8,11 +8,11 @@ published: true
 thumbnail: "/blog/thumbnails/concurrent-react.svg"
 ---
 
-React 18 didn't add features — it added **scheduling**. The same components, but the renderer can pause, resume, and prioritize work. That's concurrent React.
+React 18 didn't add features   it added **scheduling**. The same components, but the renderer can pause, resume, and prioritize work. That's concurrent React.
 
 ## The problem it solves
 
-A large list re-render blocks the main thread. Input feels laggy. Animations stutter. Classic React was synchronous — one update finished before the next started.
+A large list re-render blocks the main thread. Input feels laggy. Animations stutter. Classic React was synchronous   one update finished before the next started.
 
 Concurrent mode lets React **interrupt** low-priority renders when something urgent arrives (a keystroke, a click).
 
@@ -25,9 +25,9 @@ const [isPending, startTransition] = useTransition();
 const [filter, setFilter] = useState("");
 
 function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-  setFilter(e.target.value); // urgent — input stays snappy
+  setFilter(e.target.value); // urgent   input stays snappy
   startTransition(() => {
-    setResults(search(e.target.value)); // non-urgent — can be interrupted
+    setResults(search(e.target.value)); // non-urgent   can be interrupted
   });
 }
 ```
@@ -44,11 +44,11 @@ Suspense boundaries declare *"show fallback until ready"*:
 </Suspense>
 ```
 
-With RSC and streaming, HTML arrives incrementally — shell first, content when resolved.
+With RSC and streaming, HTML arrives incrementally   shell first, content when resolved.
 
 ## Automatic batching
 
-React 18 batches all state updates — timeouts, promises, native events — into one render. Fewer layout thrashes, fewer paint cycles.
+React 18 batches all state updates   timeouts, promises, native events   into one render. Fewer layout thrashes, fewer paint cycles.
 
 ## Mental model
 
@@ -57,8 +57,8 @@ React 18 batches all state updates — timeouts, promises, native events — int
 | `setState` | Urgent | Input, clicks |
 | `startTransition` | Transition | Filtering, tab switches |
 | `useDeferredValue` | Transition | Defer expensive derived data |
-| `Suspense` | — | Async component trees |
+| `Suspense` |   | Async component trees |
 
 ## Takeaway
 
-Concurrent React isn't about parallelism — it's about **interruption and prioritization**. Your job: tell React what's urgent. React's job: keep the UI responsive while heavy work catches up.
+Concurrent React isn't about parallelism   it's about **interruption and prioritization**. Your job: tell React what's urgent. React's job: keep the UI responsive while heavy work catches up.

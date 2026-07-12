@@ -1,6 +1,6 @@
 ---
 title: "Every Markdown Feature This Blog Supports"
-description: "A living reference for writing posts — thumbnails, code, tables, alerts, footnotes, images, audio, video, and YouTube embeds."
+description: "A living reference for writing posts   thumbnails, code, tables, alerts, footnotes, images, audio, video, and YouTube embeds."
 date: "2025-06-07"
 tags: ["Markdown", "Blog", "Reference"]
 featured: true
@@ -22,7 +22,7 @@ description: "One-line summary for SEO & cards"
 date: "2025-06-07"
 updated: "2025-06-08"          # optional
 tags: ["React", "Next.js"]
-featured: true                  # optional — larger card on index
+featured: true                  # optional   larger card on index
 published: true                 # false = hidden draft
 thumbnail: "/blog/thumbs/x.jpg"  # card & post header cover
 image: "/blog/og/x.jpg"         # optional OG/Twitter override
@@ -39,7 +39,7 @@ Keyboard shortcuts look like <kbd>Ctrl</kbd> + <kbd>S</kbd>.
 
 Autolinks work out of the box: https://nextjs.org
 
-External links open in a new tab with a ↗ indicator — [Next Production](https://nextproduction.dev).
+External links open in a new tab with a ↗ indicator   [Next Production](https://nextproduction.dev).
 
 ## Lists
 
@@ -103,7 +103,7 @@ Each block also gets a **Copy** button and terminal-style chrome in the browser.
 > Set `featured: true` to pin a post to the top grid on `/blog`.
 
 > [!IMPORTANT]
-> Thumbnails should be **16:9** for best results — SVG, PNG, or JPG in `public/`.
+> Thumbnails should be **16:9** for best results   SVG, PNG, or JPG in `public/`.
 
 > [!WARNING]
 > Static export means media files must live in `public/` or on a trusted CDN.
@@ -114,7 +114,7 @@ Each block also gets a **Copy** button and terminal-style chrome in the browser.
 ## Blockquotes & dividers
 
 > "File-based blogs scale down beautifully."
-> — every developer who deleted their CMS
+>   every developer who deleted their CMS
 
 ---
 
@@ -122,7 +122,7 @@ Each block also gets a **Copy** button and terminal-style chrome in the browser.
 
 Standard markdown images with optional title as caption:
 
-![Terminal aesthetic grid background](/blog/thumbnails/markdown-showcase.svg "Blog thumbnail — SVG cover art")
+![Terminal aesthetic grid background](/blog/thumbnails/markdown-showcase.svg "Blog thumbnail   SVG cover art")
 
 ## YouTube embeds
 
@@ -140,9 +140,9 @@ Both render as responsive 16:9 iframes with lazy loading.
 
 Host files in `public/blog/media/` then reference them:
 
-::video https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4 "MDN sample — flower.mp4"
+::video https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4 "MDN sample   flower.mp4"
 
-::audio https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3 "MDN sample — T-Rex roar"
+::audio https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3 "MDN sample   T-Rex roar"
 
 Local paths work too once you add files:
 
@@ -155,8 +155,8 @@ Local paths work too once you add files:
 
 Footnotes keep citations out of the main flow[^gfm] without breaking reading rhythm[^mdn].
 
-[^gfm]: GitHub Flavored Markdown spec — alerts, tables, task lists, and more.
-[^mdn]: MDN Web Docs — excellent CC0 media samples for testing embeds.
+[^gfm]: GitHub Flavored Markdown spec   alerts, tables, task lists, and more.
+[^mdn]: MDN Web Docs   excellent CC0 media samples for testing embeds.
 
 ## Quick reference
 

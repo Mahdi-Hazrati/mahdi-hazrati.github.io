@@ -19,7 +19,7 @@ export function About() {
     <section id="about" className="py-24 px-6 scroll-mt-20">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
-          label="01 — About"
+          label="01   About"
           title="Building for the web, one commit at a time"
           description={about.intro}
         />

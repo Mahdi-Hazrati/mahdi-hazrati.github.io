@@ -1,6 +1,6 @@
 ---
 title: "Git Internals: Objects, Refs, and the DAG Under the Hood"
-description: "Git isn't a filesystem with history — it's a content-addressed object database with labels. Once you see the DAG, everything clicks."
+description: "Git isn't a filesystem with history   it's a content-addressed object database with labels. Once you see the DAG, everything clicks."
 date: "2025-04-24"
 tags: ["Git", "Tools", "DevOps"]
 featured: false
@@ -8,7 +8,7 @@ published: true
 thumbnail: "/blog/thumbnails/git-internals.svg"
 ---
 
-`git commit` feels like saving a file. Under the hood, Git stores **snapshots as hashed objects** in `.git/objects/` — a Merkle DAG where branches are just movable pointers.
+`git commit` feels like saving a file. Under the hood, Git stores **snapshots as hashed objects** in `.git/objects/`   a Merkle DAG where branches are just movable pointers.
 
 ## Four object types
 
@@ -44,7 +44,7 @@ git rev-parse main
 
 ## The DAG
 
-Commits form a directed acyclic graph. Merge commits have **two parents**. Rebase rewires parent pointers — same patches, new commit hashes.
+Commits form a directed acyclic graph. Merge commits have **two parents**. Rebase rewires parent pointers   same patches, new commit hashes.
 
 ```
     A---B---C  main
@@ -56,18 +56,18 @@ Commits form a directed acyclic graph. Merge commits have **two parents**. Rebas
 
 ## Staging area (index)
 
-The index is a **tree snapshot** of your next commit — between working directory and repository. `git add` updates index entries; `git commit` freezes index into a tree object.
+The index is a **tree snapshot** of your next commit   between working directory and repository. `git add` updates index entries; `git commit` freezes index into a tree object.
 
 ## Why this matters
 
-- **Reflog** — orphaned commits survive until GC
-- **Cherry-pick** — applies patch, new commit hash
-- **Shallow clone** — truncates history, not objects
-- **Partial clone** — lazy-fetches missing blobs
+- **Reflog**   orphaned commits survive until GC
+- **Cherry-pick**   applies patch, new commit hash
+- **Shallow clone**   truncates history, not objects
+- **Partial clone**   lazy-fetches missing blobs
 
 > [!TIP]
 > `git gc` packs loose objects. Nothing is truly deleted until unreachable and garbage-collected.
 
 ## Takeaway
 
-Git is a **content-addressed snapshot store** with cheap branching. Files are blobs. Directories are trees. History is a DAG. Everything else — rebase, merge, stash — is pointer manipulation on that graph.
+Git is a **content-addressed snapshot store** with cheap branching. Files are blobs. Directories are trees. History is a DAG. Everything else   rebase, merge, stash   is pointer manipulation on that graph.

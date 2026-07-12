@@ -40,7 +40,7 @@ export async function generateMetadata({
   const cover = getPostCover(post);
 
   return {
-    title: `${post.title} — Mahdi Hazrati`,
+    title: `${post.title}   Mahdi Hazrati`,
     description: post.description,
     authors: [{ name: site.name, url: `https://${site.domain}` }],
     keywords: post.tags,

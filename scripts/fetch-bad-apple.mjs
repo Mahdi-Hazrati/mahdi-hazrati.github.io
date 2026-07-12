@@ -67,7 +67,7 @@ async function downloadWithFallback(name, urls) {
       const size = fs.statSync(dest).size;
       if (size < 1000) {
         fs.unlinkSync(dest);
-        throw new Error("File too small — likely a bad response");
+        throw new Error("File too small   likely a bad response");
       }
       process.stdout.write(`  ✓ ${name} (${(size / 1024 / 1024).toFixed(2)} MB)\n`);
       return;

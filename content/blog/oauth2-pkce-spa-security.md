@@ -8,14 +8,14 @@ published: true
 thumbnail: "/blog/thumbnails/oauth-pkce.svg"
 ---
 
-SPAs can't keep secrets — your client ID lives in bundled JavaScript. OAuth2's implicit flow treated that as acceptable. **It wasn't.** PKCE fixed public client auth without a backend holding credentials.
+SPAs can't keep secrets   your client ID lives in bundled JavaScript. OAuth2's implicit flow treated that as acceptable. **It wasn't.** PKCE fixed public client auth without a backend holding credentials.
 
 ## The actors
 
-- **Resource owner** — the user
-- **Client** — your SPA or mobile app
-- **Authorization server** — issues tokens (Auth0, Keycloak)
-- **Resource server** — your API
+- **Resource owner**   the user
+- **Client**   your SPA or mobile app
+- **Authorization server**   issues tokens (Auth0, Keycloak)
+- **Resource server**   your API
 
 ## Authorization code + PKCE flow
 
@@ -26,12 +26,12 @@ SPAs can't keep secrets — your client ID lives in bundled JavaScript. OAuth2's
 5. Exchange code + original verifier for tokens
 
 ```javascript
-// Step 1 — before redirect
+// Step 1   before redirect
 const verifier = generateRandomString(64);
 const challenge = base64url(sha256(verifier));
 sessionStorage.setItem("pkce_verifier", verifier);
 
-// Step 5 — token exchange
+// Step 5   token exchange
 const res = await fetch("/oauth/token", {
   method: "POST",
   body: new URLSearchParams({
@@ -58,7 +58,7 @@ For SPAs, **Backend-for-Frontend** (BFF) holding refresh tokens in httpOnly cook
 
 ## What to avoid
 
-- ~~Implicit flow~~ — deprecated (RFC 9700)
+- ~~Implicit flow~~   deprecated (RFC 9700)
 - Long-lived access tokens in localStorage
 - Client secrets in frontend bundles
 
@@ -67,4 +67,4 @@ For SPAs, **Backend-for-Frontend** (BFF) holding refresh tokens in httpOnly cook
 
 ## Takeaway
 
-PKCE turns "public client" from a vulnerability into a defined threat model. Pair it with short-lived access tokens and secure refresh handling — your users (and compliance team) will thank you.
+PKCE turns "public client" from a vulnerability into a defined threat model. Pair it with short-lived access tokens and secure refresh handling   your users (and compliance team) will thank you.

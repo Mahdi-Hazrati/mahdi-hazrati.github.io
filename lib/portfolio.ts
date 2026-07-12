@@ -4,7 +4,7 @@ export const site = {
   title: "Software Engineer",
   headline: "Software Engineer · Excited by creating",
   tagline:
-    "I build complete digital products—from architecture and UI to shipping—with React, Next.js, and open source.",
+    "I build complete digital products from architecture and UI to shipping with React, Next.js, and open source.",
   email: "mahdi@nextproduction.dev",
   cvUrl:
     "https://mahdihazrati.ir/assets/files/Mahdi%20Hazrati%20Portfolio%20-%20v3.0.3%20-%202024%2010%2024-encrypted.pdf",
@@ -57,7 +57,7 @@ export const roles = [
 
 export const about = {
   intro:
-    "I'm a software engineer based in Tehran with 6+ years in the field—shipping web apps with React and Next.js, founding Next Production, and building privacy-focused tools like Analytick. I turn UI/UX designs into fast, accessible products and contribute actively to open source (150+ public repos on GitHub).",
+    "I'm a software engineer based in Tehran with 6+ years in the field shipping web apps with React and Next.js, founding Next Production, and building privacy-focused tools like Analytick. I turn UI/UX designs into fast, accessible products and contribute actively to open source (150+ public repos on GitHub).",
   highlights: [
     {
       label: "Current role",
@@ -108,7 +108,7 @@ export const projects = [
   {
     title: "NPUI",
     description:
-      "Open-source React component library and design system from Next Production—developer-friendly primitives for shipping UI faster.",
+      "Open-source React component library and design system from Next Production developer-friendly primitives for shipping UI faster.",
     tags: ["React", "TypeScript", "Design System"],
     href: "https://github.com/NextProduction/npui",
     github: "https://github.com/NextProduction/npui",
@@ -118,7 +118,7 @@ export const projects = [
   {
     title: "Analytick",
     description:
-      "Privacy-focused web analytics platform (MVP)—real-time dashboards, lightweight integration, and GDPR-aligned design for teams in Iran and beyond.",
+      "Privacy-focused web analytics platform (MVP) real-time dashboards, lightweight integration, and GDPR-aligned design for teams in Iran and beyond.",
     tags: ["Analytics", "Privacy", "SaaS"],
     href: "https://analytick.ir",
     github: null,
@@ -128,7 +128,7 @@ export const projects = [
   {
     title: "Breakthrough",
     description:
-      "Neuroscience-based habit tracker by Next Production—TypeScript app focused on sustainable behavior change.",
+      "Neuroscience-based habit tracker by Next Production TypeScript app focused on sustainable behavior change.",
     tags: ["TypeScript", "Product", "Health"],
     href: "https://github.com/NextProduction/Breakthrough",
     github: "https://github.com/NextProduction/Breakthrough",
@@ -138,7 +138,7 @@ export const projects = [
   {
     title: "Samarayaneh products",
     description:
-      "Mid-level frontend work at Samarayaneh—launched abrsama.ir and samateb.ir with React/Next.js, responsive components, and close design collaboration.",
+      "Mid-level frontend work at Samarayaneh launched abrsama.ir and samateb.ir with React/Next.js, responsive components, and close design collaboration.",
     tags: ["Next.js", "React", "Production"],
     href: "https://samateb.ir",
     github: null,
@@ -148,7 +148,7 @@ export const projects = [
   {
     title: "mahdi.is-a.dev",
     description:
-      "This portfolio—terminal aesthetic, motion, and a Konami easter egg—hosted on the is-a.dev program.",
+      "This portfolio terminal aesthetic, motion, and a Konami easter egg hosted on the is-a.dev program.",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
     href: "https://mahdi.is-a.dev",
     github: "https://github.com/mahdi-hazrati/mahdi.is-a.dev",
@@ -158,7 +158,7 @@ export const projects = [
   {
     title: "Emoji Select Panel",
     description:
-      "Telegram-style emoji picker with full feature parity—TypeScript component for rich chat UIs.",
+      "Telegram-style emoji picker with full feature parity TypeScript component for rich chat UIs.",
     tags: ["TypeScript", "UI Component"],
     href: "https://github.com/mahdi-hazrati/Emoji-Select-Panel",
     github: "https://github.com/mahdi-hazrati/Emoji-Select-Panel",
@@ -169,45 +169,45 @@ export const projects = [
 
 export const experience = [
   {
-    period: "Nov 2025 — Present",
+    period: "Nov 2025   Present",
     role: "Frontend Developer",
     company: "Sadad Informatic Corporation",
     description:
       "Building and maintaining front-end experiences for Sadad's software products in Tehran.",
   },
   {
-    period: "Jan 2025 — Present",
+    period: "Jan 2025   Present",
     role: "Founder",
     company: "Analytick",
     description:
-      "Bootstrapping a privacy-aware analytics platform—MVP with real-time dashboards, developer-friendly setup, and GDPR-aligned practices.",
+      "Bootstrapping a privacy-aware analytics platform MVP with real-time dashboards, developer-friendly setup, and GDPR-aligned practices.",
   },
   {
-    period: "Feb 2024 — Present",
+    period: "Feb 2024   Present",
     role: "Founder",
     company: "Next Production",
     description:
       "Product studio shipping open-source tools and apps: NPUI design system, Breakthrough, GigaCaptcha, and nextproduction.dev.",
   },
   {
-    period: "Nov 2023 — Nov 2025",
+    period: "Nov 2023   Nov 2025",
     role: "Frontend Developer",
     company: "Samarayaneh",
     description:
-      "React/Next.js development—launched abrsama.ir and samateb.ir, translated UI/UX into accessible components, and partnered with backend and design teams.",
+      "React/Next.js development launched abrsama.ir and samateb.ir, translated UI/UX into accessible components, and partnered with backend and design teams.",
   },
   {
-    period: "Jan 2020 — Oct 2023",
+    period: "Jan 2020   Oct 2023",
     role: "Freelance Software Developer",
     company: "Independent",
     description:
-      "Three+ years delivering client web apps and custom solutions—foundation in React, Next.js, and end-to-end project ownership.",
+      "Three+ years delivering client web apps and custom solutions foundation in React, Next.js, and end-to-end project ownership.",
   },
 ] as const;
 
 export const nowBuilding = [
-  "Analytick MVP — privacy-first analytics for production sites",
-  "NPUI — expanding the Next Production component library",
+  "Analytick MVP   privacy-first analytics for production sites",
+  "NPUI   expanding the Next Production component library",
   "Open source at github.com/mahdi-hazrati (150+ public repos)",
 ] as const;
 

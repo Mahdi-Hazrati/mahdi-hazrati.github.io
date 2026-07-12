@@ -15,7 +15,7 @@ function buildLlmText(): string {
   const posts = getAllPosts();
   const lines: string[] = [];
 
-  lines.push(`# ${site.name} — ${site.title}`);
+  lines.push(`# ${site.name}   ${site.title}`);
   lines.push("");
   lines.push(`> ${site.tagline}`);
   lines.push("");
@@ -48,13 +48,13 @@ function buildLlmText(): string {
   lines.push("## Experience");
   for (const job of experience) {
     lines.push(
-      `- ${job.period} — ${job.role} @ ${job.company}: ${job.description}`
+      `- ${job.period}   ${job.role} @ ${job.company}: ${job.description}`
     );
   }
   lines.push("");
 
   lines.push(`## Blog (${posts.length} posts)`);
-  lines.push(`Full index: ${base}/blog — RSS feed: ${base}/feed.xml`);
+  lines.push(`Full index: ${base}/blog   RSS feed: ${base}/feed.xml`);
   lines.push("");
   for (const post of posts) {
     lines.push(`### ${post.title}`);

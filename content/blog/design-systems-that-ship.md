@@ -1,6 +1,6 @@
 ---
 title: "Design Systems That Actually Ship"
-description: "Lessons from building NPUI — tokens, primitives, and the gap between Figma and production."
+description: "Lessons from building NPUI   tokens, primitives, and the gap between Figma and production."
 date: "2025-04-02"
 tags: ["Design Systems", "React", "NPUI"]
 featured: true
@@ -14,7 +14,7 @@ Most design systems die in Storybook. The ones that survive share a pattern: the
 
 Before Button v47, define:
 
-- Color roles (`accent`, `muted`, `destructive`) — not hex values scattered in JSX
+- Color roles (`accent`, `muted`, `destructive`)   not hex values scattered in JSX
 - Spacing scale tied to Tailwind or CSS variables
 - Typography pairs (sans for UI, mono for code labels)
 - Motion presets (spring configs you reuse everywhere)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mahdi Hazrati — Tech Blog</title>
+    <title>Mahdi Hazrati   Tech Blog</title>
     <link>https://mahdi.is-a.dev/blog</link>
     <description>Notes on React, Next.js, design systems, and shipping products.</description>
     <language>en-us</language>
@@ -13,7 +13,7 @@
       <link>https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-maturity-model</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-maturity-model</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A five-level, self-scoring checklist to find out — honestly — whether your AI-assisted workflow is AI-Orchestrated Engineering or vibe coding with extra steps.]]></description>
+      <description><![CDATA[A five-level, self-scoring checklist to find out   honestly   whether your AI-assisted workflow is AI-Orchestrated Engineering or vibe coding with extra steps.]]></description>
       <category>AI Engineering</category>
       <category>Engineering Philosophy</category>
       <category>Software Quality</category>
@@ -23,7 +23,7 @@
       <link>https://mahdi.is-a.dev/blog/orchestration-patterns-for-engineers</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/orchestration-patterns-for-engineers</guid>
       <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Pipeline, fan-out/fan-in, adversarial verification, judge panels — the distributed-systems patterns that make AI-Orchestrated Engineering practical instead of aspirational.]]></description>
+      <description><![CDATA[Pipeline, fan-out/fan-in, adversarial verification, judge panels   the distributed-systems patterns that make AI-Orchestrated Engineering practical instead of aspirational.]]></description>
       <category>AI Engineering</category>
       <category>Software Architecture</category>
       <category>Distributed Systems</category>
@@ -33,7 +33,7 @@
       <link>https://mahdi.is-a.dev/blog/five-layers-ai-orchestrated-engineering</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/five-layers-ai-orchestrated-engineering</guid>
       <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Intent, Decomposition, Delegation, Verification, Synthesis — the framework I use to turn 'AI writes code fast' into 'AI-assisted systems are correct.']]></description>
+      <description><![CDATA[Intent, Decomposition, Delegation, Verification, Synthesis   the framework I use to turn 'AI writes code fast' into 'AI-assisted systems are correct.']]></description>
       <category>AI Engineering</category>
       <category>Software Architecture</category>
       <category>Engineering Philosophy</category>
@@ -43,7 +43,7 @@
       <link>https://mahdi.is-a.dev/blog/vibe-coding-trap-explained</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/vibe-coding-trap-explained</guid>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Vibe coding feels fast because it defers all its cost to later. A field guide to the five failure modes I see over and over — and why they're structural, not incidental.]]></description>
+      <description><![CDATA[Vibe coding feels fast because it defers all its cost to later. A field guide to the five failure modes I see over and over   and why they're structural, not incidental.]]></description>
       <category>AI Engineering</category>
       <category>Engineering Philosophy</category>
       <category>Software Quality</category>
@@ -53,7 +53,7 @@
       <link>https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-manifesto</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-manifesto</guid>
       <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Vibe coding treats AI as an oracle you gamble on. AI-Orchestrated Engineering treats it as an instrument you conduct. Here's the discipline I've been building — and why the distinction matters.]]></description>
+      <description><![CDATA[Vibe coding treats AI as an oracle you gamble on. AI-Orchestrated Engineering treats it as an instrument you conduct. Here's the discipline I've been building   and why the distinction matters.]]></description>
       <category>AI Engineering</category>
       <category>Engineering Philosophy</category>
       <category>AI</category>
@@ -63,7 +63,7 @@
       <link>https://mahdi.is-a.dev/blog/markdown-showcase</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/markdown-showcase</guid>
       <pubDate>Sat, 07 Jun 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[A living reference for writing posts — thumbnails, code, tables, alerts, footnotes, images, audio, video, and YouTube embeds.]]></description>
+      <description><![CDATA[A living reference for writing posts   thumbnails, code, tables, alerts, footnotes, images, audio, video, and YouTube embeds.]]></description>
       <category>Markdown</category>
       <category>Blog</category>
       <category>Reference</category>
@@ -73,7 +73,7 @@
       <link>https://mahdi.is-a.dev/blog/perlin-noise-explained</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/perlin-noise-explained</guid>
       <pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[How Ken Perlin's gradient noise creates infinite terrain, clouds, and fire — and why Simplex improved it thirty years later.]]></description>
+      <description><![CDATA[How Ken Perlin's gradient noise creates infinite terrain, clouds, and fire   and why Simplex improved it thirty years later.]]></description>
       <category>Graphics</category>
       <category>Algorithms</category>
       <category>Procedural</category>
@@ -83,7 +83,7 @@
       <link>https://mahdi.is-a.dev/blog/transformer-attention-explained</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/transformer-attention-explained</guid>
       <pubDate>Wed, 28 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[A frontend engineer's guide to the architecture behind GPT — self-attention, positional encoding, and the encoder-decoder split.]]></description>
+      <description><![CDATA[A frontend engineer's guide to the architecture behind GPT   self-attention, positional encoding, and the encoder-decoder split.]]></description>
       <category>ML</category>
       <category>Transformers</category>
       <category>Deep Learning</category>
@@ -93,7 +93,7 @@
       <link>https://mahdi.is-a.dev/blog/ray-marching-sdf-shaders</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ray-marching-sdf-shaders</guid>
       <pubDate>Sat, 24 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Render infinite geometry on a fullscreen triangle — SDFs, sphere tracing, and the shader loop that replaced polygon soup.]]></description>
+      <description><![CDATA[Render infinite geometry on a fullscreen triangle   SDFs, sphere tracing, and the shader loop that replaced polygon soup.]]></description>
       <category>Shaders</category>
       <category>WebGL</category>
       <category>Graphics</category>
@@ -113,7 +113,7 @@
       <link>https://mahdi.is-a.dev/blog/b-trees-database-indexes</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/b-trees-database-indexes</guid>
       <pubDate>Fri, 16 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[The data structure behind PostgreSQL, SQLite, and MySQL indexes — balanced trees, page alignment, and why O(log n) isn't enough.]]></description>
+      <description><![CDATA[The data structure behind PostgreSQL, SQLite, and MySQL indexes   balanced trees, page alignment, and why O(log n) isn't enough.]]></description>
       <category>Databases</category>
       <category>Algorithms</category>
       <category>Backend</category>
@@ -123,7 +123,7 @@
       <link>https://mahdi.is-a.dev/blog/file-based-blog-with-nextjs</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/file-based-blog-with-nextjs</guid>
       <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[How to ship a markdown blog with zero database, full SEO, and static export — the same stack powering mahdi.is-a.dev.]]></description>
+      <description><![CDATA[How to ship a markdown blog with zero database, full SEO, and static export   the same stack powering mahdi.is-a.dev.]]></description>
       <category>Next.js</category>
       <category>Markdown</category>
       <category>Static Export</category>
@@ -133,7 +133,7 @@
       <link>https://mahdi.is-a.dev/blog/webassembly-beyond-browser</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/webassembly-beyond-browser</guid>
       <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[From Figma's design engine to Cloudflare Workers — why WASM is becoming the portable bytecode layer of the web stack.]]></description>
+      <description><![CDATA[From Figma's design engine to Cloudflare Workers   why WASM is becoming the portable bytecode layer of the web stack.]]></description>
       <category>WebAssembly</category>
       <category>Systems</category>
       <category>Performance</category>
@@ -143,7 +143,7 @@
       <link>https://mahdi.is-a.dev/blog/raft-consensus-explained</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/raft-consensus-explained</guid>
       <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[How distributed systems agree on a log when nodes fail — terms, heartbeats, and why Paxos stayed in papers while Raft got textbooks.]]></description>
+      <description><![CDATA[How distributed systems agree on a log when nodes fail   terms, heartbeats, and why Paxos stayed in papers while Raft got textbooks.]]></description>
       <category>Distributed Systems</category>
       <category>Algorithms</category>
       <category>Backend</category>
@@ -153,7 +153,7 @@
       <link>https://mahdi.is-a.dev/blog/gradient-descent-deep-learning</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/gradient-descent-deep-learning</guid>
       <pubDate>Sun, 04 May 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Loss surfaces, learning rates, momentum, and Adam — the optimization loop that makes neural networks actually learn.]]></description>
+      <description><![CDATA[Loss surfaces, learning rates, momentum, and Adam   the optimization loop that makes neural networks actually learn.]]></description>
       <category>ML</category>
       <category>Math</category>
       <category>Deep Learning</category>
@@ -173,7 +173,7 @@
       <link>https://mahdi.is-a.dev/blog/git-internals-objects-and-refs</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/git-internals-objects-and-refs</guid>
       <pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Git isn't a filesystem with history — it's a content-addressed object database with labels. Once you see the DAG, everything clicks.]]></description>
+      <description><![CDATA[Git isn't a filesystem with history   it's a content-addressed object database with labels. Once you see the DAG, everything clicks.]]></description>
       <category>Git</category>
       <category>Tools</category>
       <category>DevOps</category>
@@ -183,7 +183,7 @@
       <link>https://mahdi.is-a.dev/blog/design-systems-that-ship</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/design-systems-that-ship</guid>
       <pubDate>Wed, 02 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Lessons from building NPUI — tokens, primitives, and the gap between Figma and production.]]></description>
+      <description><![CDATA[Lessons from building NPUI   tokens, primitives, and the gap between Figma and production.]]></description>
       <category>Design Systems</category>
       <category>React</category>
       <category>NPUI</category>
@@ -193,7 +193,7 @@
       <link>https://mahdi.is-a.dev/blog/privacy-first-analytics</link>
       <guid isPermaLink="true">https://mahdi.is-a.dev/blog/privacy-first-analytics</guid>
       <pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Building Analytick taught me that you can have real-time dashboards and respect user privacy — if you design constraints in from day one.]]></description>
+      <description><![CDATA[Building Analytick taught me that you can have real-time dashboards and respect user privacy   if you design constraints in from day one.]]></description>
       <category>Analytics</category>
       <category>Privacy</category>
       <category>SaaS</category>

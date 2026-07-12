@@ -54,7 +54,7 @@ const items = posts
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${SITE.name} — Tech Blog</title>
+    <title>${SITE.name}   Tech Blog</title>
     <link>https://${SITE.domain}/blog</link>
     <description>Notes on React, Next.js, design systems, and shipping products.</description>
     <language>en-us</language>

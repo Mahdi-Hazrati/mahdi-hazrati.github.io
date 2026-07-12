@@ -68,7 +68,7 @@ export function Hero() {
               />
             ))}
             <span className="ml-2 font-mono text-xs text-muted-foreground">
-              ~/welcome — zsh
+              ~/welcome   zsh
             </span>
           </div>
           <motion.div

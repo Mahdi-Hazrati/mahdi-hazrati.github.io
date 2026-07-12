@@ -1,6 +1,6 @@
 ---
 title: "B-Trees: Why Every Database Index Looks the Same"
-description: "The data structure behind PostgreSQL, SQLite, and MySQL indexes — balanced trees, page alignment, and why O(log n) isn't enough."
+description: "The data structure behind PostgreSQL, SQLite, and MySQL indexes   balanced trees, page alignment, and why O(log n) isn't enough."
 date: "2025-05-16"
 tags: ["Databases", "Algorithms", "Backend"]
 featured: false
@@ -8,7 +8,7 @@ published: true
 thumbnail: "/blog/thumbnails/b-trees.svg"
 ---
 
-Hash maps give O(1) lookup — why don't databases use them for indexes? Because **disk I/O dominates**, and B-trees minimize reads by matching storage page size.
+Hash maps give O(1) lookup   why don't databases use them for indexes? Because **disk I/O dominates**, and B-trees minimize reads by matching storage page size.
 
 ## B-tree basics
 
@@ -37,14 +37,14 @@ Binary trees are deep. A million rows → ~20 levels → ~20 random disk seeks. 
 
 ## Clustered vs secondary indexes
 
-- **Clustered** — leaf nodes store row data (InnoDB PK)
-- **Secondary** — leaf nodes store PK pointers → extra hop
+- **Clustered**   leaf nodes store row data (InnoDB PK)
+- **Secondary**   leaf nodes store PK pointers → extra hop
 
 That's why `SELECT *` through a secondary index costs more than covering index queries.
 
 ## Write amplification
 
-Inserts split nodes when full. Deletes merge or redistribute. B-trees trade write overhead for read predictability — the right bet for OLTP workloads.
+Inserts split nodes when full. Deletes merge or redistribute. B-trees trade write overhead for read predictability   the right bet for OLTP workloads.
 
 ## When indexes hurt
 
@@ -57,4 +57,4 @@ Inserts split nodes when full. Deletes merge or redistribute. B-trees trade writ
 
 ## Takeaway
 
-B-trees aren't trendy — they're **engineered for spinning disks and SSD page reads**. Understanding fanout and page alignment explains more production query slowness than Big-O notation alone.
+B-trees aren't trendy   they're **engineered for spinning disks and SSD page reads**. Understanding fanout and page alignment explains more production query slowness than Big-O notation alone.

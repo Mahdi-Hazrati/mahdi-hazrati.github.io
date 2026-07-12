@@ -21,7 +21,7 @@ export function Experience() {
     >
       <div className="max-w-5xl mx-auto">
         <SectionHeader
-          label="04 — Experience"
+          label="04   Experience"
           title="Where I've been shipping"
         />
 

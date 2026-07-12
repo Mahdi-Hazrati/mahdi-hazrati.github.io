@@ -20,9 +20,9 @@ export function Projects() {
     <section id="projects" className="py-24 px-6 scroll-mt-20 border-t border-border/40">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
-          label="03 — Projects"
+          label="03   Projects"
           title="Selected work"
-          description="A few things I've built or maintain — swap in your latest repos anytime."
+          description="A few things I've built or maintain   swap in your latest repos anytime."
         />
 
         <motion.div

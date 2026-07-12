@@ -3,7 +3,7 @@ import LZString from "lz-string";
 export const BAD_APPLE_FPS = 30;
 export const BAD_APPLE_ASPECT = 4 / 3;
 
-/** Static assets in public/assets/bad-apple — run `npm run bad-apple:fetch` */
+/** Static assets in public/assets/bad-apple   run `npm run bad-apple:fetch` */
 export const BAD_APPLE_PATHS = {
   frames: "/assets/bad-apple/framesData.lz",
   audio: "/assets/bad-apple/bad_apple.mp3",

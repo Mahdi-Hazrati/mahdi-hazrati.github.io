@@ -6,7 +6,7 @@ import { getAllPosts, getAllTags } from "@/lib/blog";
 import { site } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Tech Blog — Mahdi Hazrati",
+  title: "Tech Blog   Mahdi Hazrati",
   description:
     "Notes on React, Next.js, design systems, privacy-first analytics, and shipping products.",
   alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Tech Blog — Mahdi Hazrati",
+    title: "Tech Blog   Mahdi Hazrati",
     description:
       "Notes on React, Next.js, design systems, and shipping products.",
     url: `https://${site.domain}/blog`,
@@ -34,7 +34,7 @@ export default function BlogPage() {
         <BlogJsonLd posts={posts} />
         <BlogHeader
           title="Writing about what I build"
-          description="Deep dives on frontend architecture, design systems, and product engineering — straight from the terminal."
+          description="Deep dives on frontend architecture, design systems, and product engineering   straight from the terminal."
           postCount={posts.length}
         />
         <PostList posts={posts} tags={tags} />

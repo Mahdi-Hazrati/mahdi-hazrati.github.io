@@ -17,9 +17,9 @@ export function Skills() {
     <section id="skills" className="py-24 px-6 scroll-mt-20 border-t border-border/40">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
-          label="02 — Skills"
+          label="02   Skills"
           title="Stack I reach for daily"
-          description="From UI polish to shipping — tools I know well and keep sharpening."
+          description="From UI polish to shipping   tools I know well and keep sharpening."
         />
 
         <motion.div

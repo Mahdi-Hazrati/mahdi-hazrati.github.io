@@ -200,7 +200,7 @@
   );
 }
 
-/* Blog prose — matches portfolio design system */
+/* Blog prose   matches portfolio design system */
 .blog-prose {
   @apply text-foreground leading-relaxed;
   font-size: 1.0625rem;
@@ -392,7 +392,7 @@
   @apply text-center text-sm text-muted-foreground font-mono mt-3;
 }
 
-/* Media embeds — YouTube, video, audio */
+/* Media embeds   YouTube, video, audio */
 .blog-prose .media-embed {
   @apply my-8 rounded-xl border border-border/80 bg-card/40 overflow-hidden;
 }
@@ -457,7 +457,7 @@
   word-break: break-word;
 }
 
-/* Shiki syntax highlighting — dual theme for next-themes class strategy */
+/* Shiki syntax highlighting   dual theme for next-themes class strategy */
 .blog-prose pre code span,
 .code-viewer-content span {
   color: var(--shiki-light);
@@ -476,7 +476,7 @@
   text-decoration: var(--shiki-dark-text-decoration);
 }
 
-/* Inline code — not Shiki tokens */
+/* Inline code   not Shiki tokens */
 .blog-prose :not(pre) > code span {
   color: inherit;
   background-color: transparent;
@@ -485,7 +485,7 @@
   text-decoration: inherit;
 }
 
-/* Code blocks — terminal chrome via PostContent + pretty-code */
+/* Code blocks   terminal chrome via PostContent + pretty-code */
 .blog-prose figure.code-block-figure,
 .blog-prose figure[data-rehype-pretty-code-figure] {
   @apply my-8 rounded-xl border border-border/80 bg-card/40 overflow-hidden shadow-lg shadow-black/10;
@@ -538,7 +538,7 @@
   @apply bg-transparent p-0 text-[0.8125rem];
 }
 
-/* Code viewer — expanded panel inherits pretty-code tokens */
+/* Code viewer   expanded panel inherits pretty-code tokens */
 .code-viewer-panel {
   @apply bg-card/20;
 }

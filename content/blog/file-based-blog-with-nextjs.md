@@ -1,6 +1,6 @@
 ---
 title: "File-Based Blogs on Next.js Static Export"
-description: "How to ship a markdown blog with zero database, full SEO, and static export — the same stack powering mahdi.is-a.dev."
+description: "How to ship a markdown blog with zero database, full SEO, and static export   the same stack powering mahdi.is-a.dev."
 date: "2025-05-12"
 tags: ["Next.js", "Markdown", "Static Export"]
 featured: true
@@ -8,16 +8,16 @@ published: true
 thumbnail: "/blog/thumbnails/file-based-blog.svg"
 ---
 
-Markdown files in a `content/` folder are underrated. No CMS login, no API keys, no migration scripts — just git history and a build step.
+Markdown files in a `content/` folder are underrated. No CMS login, no API keys, no migration scripts   just git history and a build step.
 
 ## Why file-based?
 
 For a personal tech blog, the requirements are simple:
 
-1. **Version control** — every edit is a commit
-2. **Fast builds** — parse at build time, serve static HTML
-3. **Portability** — move hosts without exporting a database
-4. **Developer UX** — write in VS Code, preview locally
+1. **Version control**   every edit is a commit
+2. **Fast builds**   parse at build time, serve static HTML
+3. **Portability**   move hosts without exporting a database
+4. **Developer UX**   write in VS Code, preview locally
 
 Static export (`output: 'export'`) on Next.js 13+ makes this especially clean. Server components read the filesystem during `next build`, generate HTML for every route, and you deploy plain files to any CDN.
 
@@ -26,7 +26,7 @@ Static export (`output: 'export'`) on Next.js 13+ makes this especially clean. S
 A typical setup looks like this:
 
 ```typescript title="lib/blog.ts" {2,8-12}
-// lib/blog.ts — simplified
+// lib/blog.ts   simplified
 import fs from "fs";
 import matter from "gray-matter";
 import { unified } from "unified";
@@ -59,7 +59,7 @@ Frontmatter holds metadata; the body stays pure markdown.
 - GitHub alerts, footnotes[^1], and autolinks like https://nextjs.org
 - Syntax highlighting with line numbers, filenames, and `{line}` highlights
 
-[^1]: Footnotes render at the bottom of the post — great for citations without breaking reading flow.
+[^1]: Footnotes render at the bottom of the post   great for citations without breaking reading flow.
 
 - [x] Parse markdown at build time
 - [x] Highlight code with Shiki themes
@@ -69,7 +69,7 @@ Frontmatter holds metadata; the body stays pure markdown.
 > Use `published: false` in frontmatter to keep drafts out of production builds.
 
 > [!WARNING]
-> Static export means no runtime API routes — pre-generate RSS and sitemaps during `next build`.
+> Static export means no runtime API routes   pre-generate RSS and sitemaps during `next build`.
 
 ## SEO without a server
 
@@ -80,7 +80,7 @@ Even without SSR at request time, you can ship:
 - **RSS feed** generated at build time into `public/feed.xml`
 - **JSON-LD** Article schema on each post
 
-The trick with static export is that dynamic route handlers don't run in production — pre-generate feeds and sitemaps during the build instead.
+The trick with static export is that dynamic route handlers don't run in production   pre-generate feeds and sitemaps during the build instead.
 
 ## Frontmatter schema
 
@@ -102,6 +102,6 @@ Set `published: false` to hide drafts from production builds without deleting fi
 
 ## Takeaways
 
-File-based blogs scale down beautifully. You won't outgrow them until you need multi-author workflows, scheduled publishing, or a non-technical editor — and by then you'll know exactly what CMS features you actually need.
+File-based blogs scale down beautifully. You won't outgrow them until you need multi-author workflows, scheduled publishing, or a non-technical editor   and by then you'll know exactly what CMS features you actually need.
 
 Until then: write markdown, commit, deploy.

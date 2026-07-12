@@ -31,7 +31,7 @@ export function Contact() {
     <section id="contact" className="py-24 px-6 scroll-mt-20 border-t border-border/40">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
-          label="05 — Contact"
+          label="05   Contact"
           title="Let's build something together"
           description="Have a project, idea, or just want to say hi? I'd love to hear from you."
         />

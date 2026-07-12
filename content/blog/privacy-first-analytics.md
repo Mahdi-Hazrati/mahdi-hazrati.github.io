@@ -1,6 +1,6 @@
 ---
 title: "Privacy-First Analytics Without the Tradeoffs"
-description: "Building Analytick taught me that you can have real-time dashboards and respect user privacy — if you design constraints in from day one."
+description: "Building Analytick taught me that you can have real-time dashboards and respect user privacy   if you design constraints in from day one."
 date: "2025-03-18"
 tags: ["Analytics", "Privacy", "SaaS"]
 featured: false
@@ -14,10 +14,10 @@ Google Analytics is free because **you** are the product. Privacy-first analytic
 
 Marketing teams throw the term around. For Analytick, it means concrete choices:
 
-- **No cross-site tracking** — one site, one dataset
-- **No fingerprinting** — hash IPs, discard raw values quickly
-- **Minimal cookies** — session counts without persistent IDs where possible
-- **Data residency options** — important for teams in Iran and EU-adjacent compliance
+- **No cross-site tracking**   one site, one dataset
+- **No fingerprinting**   hash IPs, discard raw values quickly
+- **Minimal cookies**   session counts without persistent IDs where possible
+- **Data residency options**   important for teams in Iran and EU-adjacent compliance
 
 These aren't checkboxes. Each one changes your schema and aggregation pipeline.
 
@@ -28,7 +28,7 @@ Teams want dashboards that update in seconds. That pushes you toward event strea
 Our approach:
 
 ```javascript
-// Client — lightweight, no PII
+// Client   lightweight, no PII
 analytick.track("pageview", {
   path: location.pathname,
   referrer: document.referrer || null,

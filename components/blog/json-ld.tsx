@@ -47,7 +47,7 @@ export function BlogJsonLd({ posts }: BlogJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: `${site.name} — Tech Blog`,
+    name: `${site.name}   Tech Blog`,
     description: "Notes on React, Next.js, design systems, and shipping products.",
     url: `https://${site.domain}/blog`,
     author: {

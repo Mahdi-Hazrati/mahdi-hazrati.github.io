@@ -1,6 +1,6 @@
 ---
 title: "Gradient Descent: The Hill-Climbing Algorithm Behind Deep Learning"
-description: "Loss surfaces, learning rates, momentum, and Adam — the optimization loop that makes neural networks actually learn."
+description: "Loss surfaces, learning rates, momentum, and Adam   the optimization loop that makes neural networks actually learn."
 date: "2025-05-04"
 tags: ["ML", "Math", "Deep Learning"]
 featured: true
@@ -8,14 +8,14 @@ published: true
 thumbnail: "/blog/thumbnails/gradient-descent.svg"
 ---
 
-Neural networks are function approximators. Gradient descent is how they **find** those functions — by rolling downhill on a loss surface in million-dimensional space.
+Neural networks are function approximators. Gradient descent is how they **find** those functions   by rolling downhill on a loss surface in million-dimensional space.
 
 ## The loop
 
-1. Forward pass — compute predictions
-2. Loss function — measure error (`MSE`, cross-entropy)
-3. Backprop — compute gradients via chain rule
-4. Update — nudge weights opposite the gradient
+1. Forward pass   compute predictions
+2. Loss function   measure error (`MSE`, cross-entropy)
+3. Backprop   compute gradients via chain rule
+4. Update   nudge weights opposite the gradient
 
 ```python
 for epoch in range(epochs):
@@ -40,7 +40,7 @@ Too high → oscillation or divergence. Too low → weeks of training.
 
 ## Momentum
 
-SGD with momentum accumulates velocity — overshoots small local minima, accelerates through flat regions:
+SGD with momentum accumulates velocity   overshoots small local minima, accelerates through flat regions:
 
 ```
 v = β * v + gradient
@@ -51,12 +51,12 @@ Think ball rolling downhill, gaining inertia.
 
 ## Adam and friends
 
-**Adam** adapts per-parameter learning rates using running averages of gradient and squared gradient. Default optimizer for most deep learning — not always optimal, rarely catastrophic.
+**Adam** adapts per-parameter learning rates using running averages of gradient and squared gradient. Default optimizer for most deep learning   not always optimal, rarely catastrophic.
 
 ## Local minima myth
 
-In high dimensions, saddle points outnumber true local minima. Modern networks are **overparameterized** — many global or near-global solutions exist. The hard part is finding them fast, not escaping traps.
+In high dimensions, saddle points outnumber true local minima. Modern networks are **overparameterized**   many global or near-global solutions exist. The hard part is finding them fast, not escaping traps.
 
 ## Takeaway
 
-Every LLM, every classifier, every diffusion model — same core loop. Master gradient descent and backprop, and the rest of deep learning is architecture choices stacked on top.
+Every LLM, every classifier, every diffusion model   same core loop. Master gradient descent and backprop, and the rest of deep learning is architecture choices stacked on top.

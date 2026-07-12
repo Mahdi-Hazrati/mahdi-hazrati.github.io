@@ -33,7 +33,7 @@ export function BlogHeader({ title, description, postCount }: BlogHeaderProps) {
             <span key={c} className={`w-3 h-3 rounded-full ${c}`} />
           ))}
           <span className="ml-2 font-mono text-xs text-muted-foreground">
-            ~/blog — ls posts/
+            ~/blog   ls posts/
           </span>
         </div>
         <div className="p-6 md:p-8 font-mono text-sm space-y-2">
@@ -41,7 +41,7 @@ export function BlogHeader({ title, description, postCount }: BlogHeaderProps) {
             <span className="text-accent">$</span> ls -la content/blog/
           </p>
           <p className="text-muted-foreground">
-            total {postCount} — {postCount} markdown files, 0 directories
+            total {postCount}   {postCount} markdown files, 0 directories
           </p>
         </div>
       </div>

@@ -4,11 +4,11 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahdi.is-a.dev"),
-  title: "Mahdi Hazrati — Software Engineer",
+  title: "Mahdi Hazrati   Software Engineer",
   description:
-    "Portfolio of Mahdi Hazrati — frontend at Sadad, founder of Next Production & Analytick. React, Next.js, and 150+ open-source repos.",
+    "Portfolio of Mahdi Hazrati   frontend at Sadad, founder of Next Production & Analytick. React, Next.js, and 150+ open-source repos.",
   openGraph: {
-    title: "Mahdi Hazrati — Software Engineer",
+    title: "Mahdi Hazrati   Software Engineer",
     description:
       "Building digital products with React and Next.js. Founder @ Next Production · Analytick.",
     url: "https://mahdi.is-a.dev",

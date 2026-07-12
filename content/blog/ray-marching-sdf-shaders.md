@@ -1,6 +1,6 @@
 ---
 title: "Ray Marching and Signed Distance Fields"
-description: "Render infinite geometry on a fullscreen triangle — SDFs, sphere tracing, and the shader loop that replaced polygon soup."
+description: "Render infinite geometry on a fullscreen triangle   SDFs, sphere tracing, and the shader loop that replaced polygon soup."
 date: "2025-05-24"
 tags: ["Shaders", "WebGL", "Graphics"]
 featured: true
@@ -8,11 +8,11 @@ published: true
 thumbnail: "/blog/thumbnails/ray-marching.svg"
 ---
 
-Polygon rasterization won the real-time race for decades. But in shader land, a fullscreen quad and a `for` loop can render **infinite** detail — no meshes, no UV unwrapping, no LOD chains.
+Polygon rasterization won the real-time race for decades. But in shader land, a fullscreen quad and a `for` loop can render **infinite** detail   no meshes, no UV unwrapping, no LOD chains.
 
 ## The setup
 
-Cast a ray from the camera through each pixel. Step along the ray until you hit a surface. That's ray marching — but naive stepping is slow.
+Cast a ray from the camera through each pixel. Step along the ray until you hit a surface. That's ray marching   but naive stepping is slow.
 
 **Sphere tracing** uses signed distance functions (SDFs): at any point in space, the SDF returns the distance to the nearest surface. You can safely advance by that distance without overshooting.
 
@@ -48,7 +48,7 @@ float rayMarch(vec3 ro, vec3 rd) {
 
 ## Normals and lighting
 
-No vertex normals exist — estimate via gradient:
+No vertex normals exist   estimate via gradient:
 
 ```glsl
 vec3 calcNormal(vec3 p) {
@@ -72,4 +72,4 @@ Then standard Phong/Blinn lighting applies.
 
 ## The tradeoff
 
-Ray marching is CPU/GPU **brute force**. Modern games hybridize — SDFs for volumetrics, meshes for characters. But understanding SDFs unlocks a different way to think about geometry entirely.
+Ray marching is CPU/GPU **brute force**. Modern games hybridize   SDFs for volumetrics, meshes for characters. But understanding SDFs unlocks a different way to think about geometry entirely.

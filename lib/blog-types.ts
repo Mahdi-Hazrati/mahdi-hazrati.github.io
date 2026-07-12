@@ -10,7 +10,7 @@ export type BlogFrontmatter = {
   featured?: boolean;
   /** Open Graph / social share image */
   image?: string;
-  /** Card & post header cover — falls back to `image` */
+  /** Card & post header cover   falls back to `image` */
   thumbnail?: string;
 };
 
