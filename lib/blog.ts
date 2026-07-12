@@ -10,10 +10,10 @@ import type {
   BlogPostMeta,
   TocHeading,
 } from "./blog-types";
-import { blogIndexUrl, postUrl, slugifyHeading } from "./blog-types";
+import { blogIndexUrl, editUrl, postUrl, slugifyHeading } from "./blog-types";
 
 export type { BlogFrontmatter, BlogPost, BlogPostMeta, TocHeading } from "./blog-types";
-export { formatDate, postUrl, blogIndexUrl } from "./blog-types";
+export { formatDate, postUrl, blogIndexUrl, editUrl } from "./blog-types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "blog");
 

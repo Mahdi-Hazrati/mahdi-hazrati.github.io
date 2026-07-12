@@ -47,6 +47,10 @@ export function blogIndexUrl(): string {
   return `https://${site.domain}/blog`;
 }
 
+export function editUrl(slug: string): string {
+  return `${site.repoUrl}/edit/${site.repoBranch}/content/blog/${slug}.md`;
+}
+
 export function slugifyHeading(text: string): string {
   return text
     .toLowerCase()

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Pencil, Tag } from "lucide-react";
 import { ArticleJsonLd } from "@/components/blog/json-ld";
 import { PostContent } from "@/components/blog/post-content";
 import { PostCover } from "@/components/blog/post-cover";
@@ -11,6 +11,7 @@ import { RelatedPosts } from "@/components/blog/related-posts";
 import { ShareLinks } from "@/components/blog/share-links";
 import { TableOfContents } from "@/components/blog/table-of-contents";
 import {
+  editUrl,
   formatDate,
   getAdjacentPosts,
   getAllPosts,
@@ -128,8 +129,17 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </ul>
                 )}
 
-                <div className="mt-8 pt-6 border-t border-border/40">
+                <div className="mt-8 pt-6 border-t border-border/40 flex flex-wrap items-center justify-between gap-4">
                   <ShareLinks url={url} title={post.title} />
+                  <a
+                    href={editUrl(post.slug)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    <Pencil className="w-3.5 h-3.5" />
+                    Edit on GitHub
+                  </a>
                 </div>
               </header>
 

@@ -12,6 +12,8 @@ export const site = {
   availability: "Open to collaborations",
   github: "https://github.com/mahdi-hazrati",
   linkedin: "https://www.linkedin.com/in/mahdihazratidev",
+  repoUrl: "https://github.com/Mahdi-Hazrati/mahdi.is-a.dev",
+  repoBranch: "main",
 } as const;
 
 export const navLinks = [
