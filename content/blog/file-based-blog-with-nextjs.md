@@ -5,6 +5,7 @@ date: "2025-05-12"
 tags: ["Next.js", "Markdown", "Static Export"]
 featured: true
 published: true
+thumbnail: "/blog/thumbnails/file-based-blog.svg"
 ---
 
 Markdown files in a `content/` folder are underrated. No CMS login, no API keys, no migration scripts — just git history and a build step.

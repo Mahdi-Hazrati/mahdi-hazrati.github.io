@@ -5,6 +5,7 @@ date: "2025-04-02"
 tags: ["Design Systems", "React", "NPUI"]
 featured: true
 published: true
+thumbnail: "/blog/thumbnails/design-systems-ship.svg"
 ---
 
 Most design systems die in Storybook. The ones that survive share a pattern: they optimize for **shipping speed**, not documentation completeness.

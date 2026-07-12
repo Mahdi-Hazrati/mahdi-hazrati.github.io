@@ -5,9 +5,59 @@
     <link>https://mahdi.is-a.dev/blog</link>
     <description>Notes on React, Next.js, design systems, and shipping products.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 06:52:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 09:04:19 GMT</lastBuildDate>
     <atom:link href="https://mahdi.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     
+    <item>
+      <title><![CDATA[Are You Orchestrating or Vibing? A Maturity Model for AI-Assisted Engineering]]></title>
+      <link>https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-maturity-model</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-maturity-model</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[A five-level, self-scoring checklist to find out — honestly — whether your AI-assisted workflow is AI-Orchestrated Engineering or vibe coding with extra steps.]]></description>
+      <category>AI Engineering</category>
+      <category>Engineering Philosophy</category>
+      <category>Software Quality</category>
+    </item>
+    <item>
+      <title><![CDATA[Orchestration Patterns: Directing AI Like a Systems Architect]]></title>
+      <link>https://mahdi.is-a.dev/blog/orchestration-patterns-for-engineers</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/orchestration-patterns-for-engineers</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Pipeline, fan-out/fan-in, adversarial verification, judge panels — the distributed-systems patterns that make AI-Orchestrated Engineering practical instead of aspirational.]]></description>
+      <category>AI Engineering</category>
+      <category>Software Architecture</category>
+      <category>Distributed Systems</category>
+    </item>
+    <item>
+      <title><![CDATA[The Five Layers of AI-Orchestrated Engineering]]></title>
+      <link>https://mahdi.is-a.dev/blog/five-layers-ai-orchestrated-engineering</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/five-layers-ai-orchestrated-engineering</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Intent, Decomposition, Delegation, Verification, Synthesis — the framework I use to turn 'AI writes code fast' into 'AI-assisted systems are correct.']]></description>
+      <category>AI Engineering</category>
+      <category>Software Architecture</category>
+      <category>Engineering Philosophy</category>
+    </item>
+    <item>
+      <title><![CDATA[The Vibe Coding Trap: Why 'Just Let the AI Do It' Fails at Scale]]></title>
+      <link>https://mahdi.is-a.dev/blog/vibe-coding-trap-explained</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/vibe-coding-trap-explained</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Vibe coding feels fast because it defers all its cost to later. A field guide to the five failure modes I see over and over — and why they're structural, not incidental.]]></description>
+      <category>AI Engineering</category>
+      <category>Engineering Philosophy</category>
+      <category>Software Quality</category>
+    </item>
+    <item>
+      <title><![CDATA[AI-Orchestrated Engineering: A New Discipline Beyond Vibe Coding]]></title>
+      <link>https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-manifesto</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-manifesto</guid>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Vibe coding treats AI as an oracle you gamble on. AI-Orchestrated Engineering treats it as an instrument you conduct. Here's the discipline I've been building — and why the distinction matters.]]></description>
+      <category>AI Engineering</category>
+      <category>Engineering Philosophy</category>
+      <category>AI</category>
+    </item>
     <item>
       <title><![CDATA[Every Markdown Feature This Blog Supports]]></title>
       <link>https://mahdi.is-a.dev/blog/markdown-showcase</link>

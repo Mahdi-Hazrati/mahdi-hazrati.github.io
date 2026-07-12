@@ -5,6 +5,7 @@ date: "2025-03-18"
 tags: ["Analytics", "Privacy", "SaaS"]
 featured: false
 published: true
+thumbnail: "/blog/thumbnails/privacy-analytics.svg"
 ---
 
 Google Analytics is free because **you** are the product. Privacy-first analytics flip the model: you pay for infrastructure, users keep their data.
