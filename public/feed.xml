@@ -5,9 +5,19 @@
     <link>https://mahdi.is-a.dev/blog</link>
     <description>Notes on React, Next.js, design systems, and shipping products.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2026 09:58:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 10:18:25 GMT</lastBuildDate>
     <atom:link href="https://mahdi.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     
+    <item>
+      <title><![CDATA[The Day the Facility Guy Shipped a Feature to My App]]></title>
+      <link>https://mahdi.is-a.dev/blog/the-day-the-facility-guy-shipped-a-feature</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/the-day-the-facility-guy-shipped-a-feature</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[I taught our building's maintenance guy how to vibe code for fun. Twenty minutes later he'd chatted his way into a working feature inside one of my real apps. Here's what actually happened, and why it didn't disprove anything I've written in this series.]]></description>
+      <category>AI Engineering</category>
+      <category>Vibe Coding</category>
+      <category>Engineering Philosophy</category>
+    </item>
     <item>
       <title><![CDATA[Are You Orchestrating or Vibing? A Maturity Model for AI-Assisted Engineering]]></title>
       <link>https://mahdi.is-a.dev/blog/ai-orchestrated-engineering-maturity-model</link>
