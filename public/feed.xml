@@ -5,9 +5,19 @@
     <link>https://mahdi.is-a.dev/blog</link>
     <description>Notes on React, Next.js, design systems, and shipping products.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 10:18:25 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 10:21:33 GMT</lastBuildDate>
     <atom:link href="https://mahdi.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     
+    <item>
+      <title><![CDATA[AI Coding Is Like Horseback Riding: the Horse Runs, You Still Get Tired]]></title>
+      <link>https://mahdi.is-a.dev/blog/ai-coding-is-like-horseback-riding</link>
+      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/ai-coding-is-like-horseback-riding</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[The horse is doing the running. You're still the one who has to stay balanced, read the terrain, and not fall off. That's the whole difference between vibe coding and actually directing the thing.]]></description>
+      <category>AI Engineering</category>
+      <category>Vibe Coding</category>
+      <category>Engineering Philosophy</category>
+    </item>
     <item>
       <title><![CDATA[The Day the Facility Guy Shipped a Feature to My App]]></title>
       <link>https://mahdi.is-a.dev/blog/the-day-the-facility-guy-shipped-a-feature</link>
@@ -197,16 +207,6 @@
       <category>Design Systems</category>
       <category>React</category>
       <category>NPUI</category>
-    </item>
-    <item>
-      <title><![CDATA[Privacy-First Analytics Without the Tradeoffs]]></title>
-      <link>https://mahdi.is-a.dev/blog/privacy-first-analytics</link>
-      <guid isPermaLink="true">https://mahdi.is-a.dev/blog/privacy-first-analytics</guid>
-      <pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Building Analytick taught me that you can have real-time dashboards and respect user privacy   if you design constraints in from day one.]]></description>
-      <category>Analytics</category>
-      <category>Privacy</category>
-      <category>SaaS</category>
     </item>
   </channel>
 </rss>
